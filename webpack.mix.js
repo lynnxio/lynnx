@@ -15,19 +15,38 @@ require('laravel-mix-purgecss');
 mix.js('resources/js/site.js', 'public/js')
 
 mix.postCss('resources/css/tailwind.css', 'public/css', [
-  require('postcss-import'),
-  require('tailwindcss'),
-  require('postcss-nested'),
-  require('postcss-preset-env')({stage: 0})
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('postcss-nested'),
+    require('postcss-preset-env')({
+        stage: 0
+    })
 ])
 
 if (mix.inProduction()) {
-  mix.version();
-  mix.purgeCss({
-    enabled: true,
-    whitelistPatternsChildren: [/^content$/],
-  });
+    mix.version();
+    mix.purgeCss({
+        enabled: true,
+        whitelistPatternsChildren: [/^content$/],
+    });
 }
+
+mix.browserSync({
+    host: '192.68.56.10',
+    proxy: 'lynnx.test',
+    open: false,
+    files: [
+        'app/**/*.php',
+        'resources/views/**/*.antlers.html',
+        'packages/mixdinternet/frontend/src/**/*.php',
+        'public/js/**/*.js',
+        'public/css/**/*.css'
+    ],
+    watchOptions: {
+        usePolling: true,
+        interval: 500
+    }
+});
 
 /*
  |--------------------------------------------------------------------------

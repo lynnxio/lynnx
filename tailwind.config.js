@@ -1,4 +1,10 @@
 module.exports = {
+    content: [
+        './resources/**/*.antlers.html',
+        './resources/**/*.blade.php',
+        './resources/**/*.vue',
+        './content/**/*.md'
+    ],
     prefix: '',
     important: true,
     separator: ':',
@@ -10,8 +16,8 @@ module.exports = {
             xl: '1280px',
         },
         colors: {
-            lynnxBg: '#262626',
-            lynnxH1:'#E82F27',
+            color__background_lynnx: '#262626',
+            color__text_lynnx: '#E82F27',
             transparent: 'transparent',
             black: '#000',
             white: '#fff',
@@ -90,8 +96,8 @@ module.exports = {
                 '"Courier New"',
                 'monospace',
             ],
-            lynnx:[
-                'Righteous',
+            lynnx: [
+                '"Righteous"',
                 'sans-serif'
             ]
         },
@@ -128,7 +134,9 @@ module.exports = {
             disc: 'disc',
             decimal: 'decimal',
         },
-        margin: (theme, { negative }) => ({
+        margin: (theme, {
+            negative
+        }) => ({
             auto: 'auto',
             ...theme('spacing'),
             ...negative(theme('spacing')),

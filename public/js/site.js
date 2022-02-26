@@ -1,112 +1,2923 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/alpinejs/dist/alpine.js":
-/*!**********************************************!*\
-  !*** ./node_modules/alpinejs/dist/alpine.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/@splidejs/splide/dist/js/splide.esm.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@splidejs/splide/dist/js/splide.esm.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-!function(global,factory){ true?module.exports=factory():undefined}(this,(function(){"use strict";function _defineProperty(obj,key,value){return key in obj?Object.defineProperty(obj,key,{value:value,enumerable:!0,configurable:!0,writable:!0}):obj[key]=value,obj}function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);enumerableOnly&&(symbols=symbols.filter((function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable}))),keys.push.apply(keys,symbols)}return keys}function _objectSpread2(target){for(var i=1;i<arguments.length;i++){var source=null!=arguments[i]?arguments[i]:{};i%2?ownKeys(Object(source),!0).forEach((function(key){_defineProperty(target,key,source[key])})):Object.getOwnPropertyDescriptors?Object.defineProperties(target,Object.getOwnPropertyDescriptors(source)):ownKeys(Object(source)).forEach((function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key))}))}return target}function arrayUnique(array){for(var a=array.concat(),i=0;i<a.length;++i)for(var j=i+1;j<a.length;++j)a[i]===a[j]&&a.splice(j--,1);return a}function isTesting(){return navigator.userAgent.includes("Node.js")||navigator.userAgent.includes("jsdom")}function saferEval(expression,dataContext,additionalHelperVariables={}){return new Function(["$data",...Object.keys(additionalHelperVariables)],`var result; with($data) { result = ${expression} }; return result`)(dataContext,...Object.values(additionalHelperVariables))}function saferEvalNoReturn(expression,dataContext,additionalHelperVariables={}){return new Function(["dataContext",...Object.keys(additionalHelperVariables)],`with(dataContext) { ${expression} }`)(dataContext,...Object.values(additionalHelperVariables))}function isXAttr(attr){const name=replaceAtAndColonWithStandardSyntax(attr.name);return/x-(on|bind|data|text|html|model|if|for|show|cloak|transition|ref)/.test(name)}function getXAttrs(el,type){return Array.from(el.attributes).filter(isXAttr).map(attr=>{const name=replaceAtAndColonWithStandardSyntax(attr.name),typeMatch=name.match(/x-(on|bind|data|text|html|model|if|for|show|cloak|transition|ref)/),valueMatch=name.match(/:([a-zA-Z\-:]+)/),modifiers=name.match(/\.[^.\]]+(?=[^\]]*$)/g)||[];return{type:typeMatch?typeMatch[1]:null,value:valueMatch?valueMatch[1]:null,modifiers:modifiers.map(i=>i.replace(".","")),expression:attr.value}}).filter(i=>!type||i.type===type)}function replaceAtAndColonWithStandardSyntax(name){return name.startsWith("@")?name.replace("@","x-on:"):name.startsWith(":")?name.replace(":","x-bind:"):name}function transitionIn(el,show,forceSkip=!1){if(forceSkip)return show();const attrs=getXAttrs(el,"transition"),showAttr=getXAttrs(el,"show")[0];if(showAttr&&showAttr.modifiers.includes("transition")){let modifiers=showAttr.modifiers;if(modifiers.includes("out")&&!modifiers.includes("in"))return show();const settingBothSidesOfTransition=modifiers.includes("in")&&modifiers.includes("out");modifiers=settingBothSidesOfTransition?modifiers.filter((i,index)=>index<modifiers.indexOf("out")):modifiers,function(el,modifiers,showCallback){const styleValues={duration:modifierValue(modifiers,"duration",150),origin:modifierValue(modifiers,"origin","center"),first:{opacity:0,scale:modifierValue(modifiers,"scale",95)},second:{opacity:1,scale:100}};transitionHelper(el,modifiers,showCallback,()=>{},styleValues)}(el,modifiers,show)}else attrs.length>0?function(el,directives,showCallback){const enter=(directives.find(i=>"enter"===i.value)||{expression:""}).expression.split(" ").filter(i=>""!==i),enterStart=(directives.find(i=>"enter-start"===i.value)||{expression:""}).expression.split(" ").filter(i=>""!==i),enterEnd=(directives.find(i=>"enter-end"===i.value)||{expression:""}).expression.split(" ").filter(i=>""!==i);transitionClasses(el,enter,enterStart,enterEnd,showCallback,()=>{})}(el,attrs,show):show()}function transitionOut(el,hide,forceSkip=!1){if(forceSkip)return hide();const attrs=getXAttrs(el,"transition"),showAttr=getXAttrs(el,"show")[0];if(showAttr&&showAttr.modifiers.includes("transition")){let modifiers=showAttr.modifiers;if(modifiers.includes("in")&&!modifiers.includes("out"))return hide();const settingBothSidesOfTransition=modifiers.includes("in")&&modifiers.includes("out");modifiers=settingBothSidesOfTransition?modifiers.filter((i,index)=>index>modifiers.indexOf("out")):modifiers,function(el,modifiers,settingBothSidesOfTransition,hideCallback){const styleValues={duration:settingBothSidesOfTransition?modifierValue(modifiers,"duration",150):modifierValue(modifiers,"duration",150)/2,origin:modifierValue(modifiers,"origin","center"),first:{opacity:1,scale:100},second:{opacity:0,scale:modifierValue(modifiers,"scale",95)}};transitionHelper(el,modifiers,()=>{},hideCallback,styleValues)}(el,modifiers,settingBothSidesOfTransition,hide)}else attrs.length>0?function(el,directives,hideCallback){const leave=(directives.find(i=>"leave"===i.value)||{expression:""}).expression.split(" ").filter(i=>""!==i),leaveStart=(directives.find(i=>"leave-start"===i.value)||{expression:""}).expression.split(" ").filter(i=>""!==i),leaveEnd=(directives.find(i=>"leave-end"===i.value)||{expression:""}).expression.split(" ").filter(i=>""!==i);transitionClasses(el,leave,leaveStart,leaveEnd,()=>{},hideCallback)}(el,attrs,hide):hide()}function modifierValue(modifiers,key,fallback){if(-1===modifiers.indexOf(key))return fallback;const rawValue=modifiers[modifiers.indexOf(key)+1];if(!rawValue)return fallback;if("scale"===key&&isNaN(rawValue))return fallback;if("duration"===key){let match=rawValue.match(/([0-9]+)ms/);if(match)return match[1]}return"origin"===key&&["top","right","left","center","bottom"].includes(modifiers[modifiers.indexOf(key)+2])?[rawValue,modifiers[modifiers.indexOf(key)+2]].join(" "):rawValue}function transitionHelper(el,modifiers,hook1,hook2,styleValues){const opacityCache=el.style.opacity,transformCache=el.style.transform,transformOriginCache=el.style.transformOrigin,noModifiers=!modifiers.includes("opacity")&&!modifiers.includes("scale"),transitionOpacity=noModifiers||modifiers.includes("opacity"),transitionScale=noModifiers||modifiers.includes("scale"),stages={start(){transitionOpacity&&(el.style.opacity=styleValues.first.opacity),transitionScale&&(el.style.transform=`scale(${styleValues.first.scale/100})`)},during(){transitionScale&&(el.style.transformOrigin=styleValues.origin),el.style.transitionProperty=[transitionOpacity?"opacity":"",transitionScale?"transform":""].join(" ").trim(),el.style.transitionDuration=`${styleValues.duration/1e3}s`,el.style.transitionTimingFunction="cubic-bezier(0.4, 0.0, 0.2, 1)"},show(){hook1()},end(){transitionOpacity&&(el.style.opacity=styleValues.second.opacity),transitionScale&&(el.style.transform=`scale(${styleValues.second.scale/100})`)},hide(){hook2()},cleanup(){transitionOpacity&&(el.style.opacity=opacityCache),transitionScale&&(el.style.transform=transformCache),transitionScale&&(el.style.transformOrigin=transformOriginCache),el.style.transitionProperty=null,el.style.transitionDuration=null,el.style.transitionTimingFunction=null}};transition(el,stages)}function transitionClasses(el,classesDuring,classesStart,classesEnd,hook1,hook2){const originalClasses=el.__x_original_classes||[],stages={start(){el.classList.add(...classesStart)},during(){el.classList.add(...classesDuring)},show(){hook1()},end(){el.classList.remove(...classesStart.filter(i=>!originalClasses.includes(i))),el.classList.add(...classesEnd)},hide(){hook2()},cleanup(){el.classList.remove(...classesDuring.filter(i=>!originalClasses.includes(i))),el.classList.remove(...classesEnd.filter(i=>!originalClasses.includes(i)))}};transition(el,stages)}function transition(el,stages){stages.start(),stages.during(),requestAnimationFrame(()=>{const duration=1e3*Number(getComputedStyle(el).transitionDuration.replace("s",""));stages.show(),requestAnimationFrame(()=>{stages.end(),setTimeout(()=>{stages.hide(),el.isConnected&&stages.cleanup()},duration)})})}function deepProxy(target,proxyHandler){if(null===target)return target;if("object"!=typeof target)return target;if(target instanceof Node)return target;if(target.$isAlpineProxy)return target;for(let property in target)target[property]=deepProxy(target[property],proxyHandler);return new Proxy(target,proxyHandler)}function handleForDirective(component,el,expression,initialUpdate){const{single:single,bunch:bunch,iterator1:iterator1,iterator2:iterator2}=function(expression){const forIteratorRE=/,([^,\}\]]*)(?:,([^,\}\]]*))?$/,inMatch=expression.match(/([\s\S]*?)\s+(?:in|of)\s+([\s\S]*)/);if(!inMatch)return;const res={};res.bunch=inMatch[2].trim();const single=inMatch[1].trim().replace(/^\(|\)$/g,""),iteratorMatch=single.match(forIteratorRE);iteratorMatch?(res.single=single.replace(forIteratorRE,"").trim(),res.iterator1=iteratorMatch[1].trim(),iteratorMatch[2]&&(res.iterator2=iteratorMatch[2].trim())):res.single=single;return res}(expression);var items=component.evaluateReturnExpression(el,bunch),previousEl=el;items.forEach((i,index,group)=>{const currentKey=function(component,el,single,iterator1,iterator2,i,index,group){const keyAttr=getXAttrs(el,"bind").filter(attr=>"key"===attr.value)[0];let keyAliases={[single]:i};iterator1&&(keyAliases[iterator1]=index);iterator2&&(keyAliases[iterator2]=group);return keyAttr?component.evaluateReturnExpression(el,keyAttr.expression,()=>keyAliases):index}(component,el,single,iterator1,iterator2,i,index,group);let currentEl=previousEl.nextElementSibling;if(currentEl&&void 0!==currentEl.__x_for_key){if(currentEl.__x_for_key!==currentKey)for(var tmpCurrentEl=currentEl;tmpCurrentEl;){if(tmpCurrentEl.__x_for_key===currentKey){el.parentElement.insertBefore(tmpCurrentEl,currentEl),currentEl=tmpCurrentEl;break}tmpCurrentEl=!(!tmpCurrentEl.nextElementSibling||void 0===tmpCurrentEl.nextElementSibling.__x_for_key)&&tmpCurrentEl.nextElementSibling}delete currentEl.__x_for_key,currentEl.__x_for_alias=single,currentEl.__x_for_value=i,component.updateElements(currentEl,()=>({[currentEl.__x_for_alias]:currentEl.__x_for_value}))}else{const clone=document.importNode(el.content,!0);el.parentElement.insertBefore(clone,currentEl),currentEl=previousEl.nextElementSibling,transitionIn(currentEl,()=>{},initialUpdate),currentEl.__x_for_alias=single,currentEl.__x_for_value=i,component.initializeElements(currentEl,()=>({[currentEl.__x_for_alias]:currentEl.__x_for_value}))}currentEl.__x_for_key=currentKey,previousEl=currentEl});for(var nextElementFromOldLoop=!(!previousEl.nextElementSibling||void 0===previousEl.nextElementSibling.__x_for_key)&&previousEl.nextElementSibling;nextElementFromOldLoop;){const nextElementFromOldLoopImmutable=nextElementFromOldLoop,nextSibling=nextElementFromOldLoop.nextElementSibling;transitionOut(nextElementFromOldLoop,()=>{nextElementFromOldLoopImmutable.remove()}),nextElementFromOldLoop=!(!nextSibling||void 0===nextSibling.__x_for_key)&&nextSibling}}function handleAttributeBindingDirective(component,el,attrName,expression,extraVars){var value=component.evaluateReturnExpression(el,expression,extraVars);if("value"===attrName)if(void 0===value&&expression.match(/\./).length&&(value=""),"radio"===el.type)el.checked=el.value==value;else if("checkbox"===el.type)if(Array.isArray(value)){let valueFound=!1;value.forEach(val=>{val==el.value&&(valueFound=!0)}),el.checked=valueFound}else el.checked=!!value;else"SELECT"===el.tagName?function(el,value){const arrayWrappedValue=[].concat(value).map(value=>value+"");Array.from(el.options).forEach(option=>{option.selected=arrayWrappedValue.includes(option.value||option.text)})}(el,value):el.value=value;else if("class"===attrName)if(Array.isArray(value)){const originalClasses=el.__x_original_classes||[];el.setAttribute("class",arrayUnique(originalClasses.concat(value)).join(" "))}else if("object"==typeof value)Object.keys(value).forEach(classNames=>{value[classNames]?classNames.split(" ").forEach(className=>el.classList.add(className)):classNames.split(" ").forEach(className=>el.classList.remove(className))});else{const originalClasses=el.__x_original_classes||[],newClasses=value.split(" ");el.setAttribute("class",arrayUnique(originalClasses.concat(newClasses)).join(" "))}else["disabled","readonly","required","checked","hidden","selected"].includes(attrName)?value?el.setAttribute(attrName,""):el.removeAttribute(attrName):el.setAttribute(attrName,value)}function registerListener(component,el,event,modifiers,expression,extraVars={}){if(modifiers.includes("away")){const handler=e=>{el.contains(e.target)||el.offsetWidth<1&&el.offsetHeight<1||(runListenerHandler(component,expression,e,extraVars),modifiers.includes("once")&&document.removeEventListener(event,handler))};document.addEventListener(event,handler)}else{const listenerTarget=modifiers.includes("window")?window:modifiers.includes("document")?document:el,handler=e=>{if(function(event){return["keydown","keyup"].includes(event)}(event)&&function(e,modifiers){let keyModifiers=modifiers.filter(i=>!["window","document","prevent","stop"].includes(i));if(0===keyModifiers.length)return!1;if(1===keyModifiers.length&&keyModifiers[0]===keyToModifier(e.key))return!1;const selectedSystemKeyModifiers=["ctrl","shift","alt","meta","cmd","super"].filter(modifier=>keyModifiers.includes(modifier));if(keyModifiers=keyModifiers.filter(i=>!selectedSystemKeyModifiers.includes(i)),selectedSystemKeyModifiers.length>0){if(selectedSystemKeyModifiers.filter(modifier=>("cmd"!==modifier&&"super"!==modifier||(modifier="meta"),e[`${modifier}Key`])).length===selectedSystemKeyModifiers.length&&keyModifiers[0]===keyToModifier(e.key))return!1}return!0}(e,modifiers))return;modifiers.includes("prevent")&&e.preventDefault(),modifiers.includes("stop")&&e.stopPropagation(),!1===runListenerHandler(component,expression,e,extraVars)?e.preventDefault():modifiers.includes("once")&&listenerTarget.removeEventListener(event,handler)};listenerTarget.addEventListener(event,handler)}}function runListenerHandler(component,expression,e,extraVars){return component.evaluateCommandExpression(e.target,expression,()=>_objectSpread2({},extraVars(),{$event:e}))}function keyToModifier(key){switch(key){case"/":return"slash";case" ":case"Spacebar":return"space";default:return key.replace(/([a-z])([A-Z])/g,"$1-$2").replace(/[_\s]/,"-").toLowerCase()}}function generateModelAssignmentFunction(el,modifiers,expression){return"radio"===el.type&&(el.hasAttribute("name")||el.setAttribute("name",expression)),(event,currentValue)=>event instanceof CustomEvent&&event.detail?event.detail:"checkbox"===el.type?Array.isArray(currentValue)?event.target.checked?currentValue.concat([event.target.value]):currentValue.filter(i=>i!==event.target.value):event.target.checked:"select"===el.tagName.toLowerCase()&&el.multiple?modifiers.includes("number")?Array.from(event.target.selectedOptions).map(option=>parseFloat(option.value||option.text)):Array.from(event.target.selectedOptions).map(option=>option.value||option.text):modifiers.includes("number")?parseFloat(event.target.value):modifiers.includes("trim")?event.target.value.trim():event.target.value}class Component{constructor(el){this.$el=el;const dataAttr=this.$el.getAttribute("x-data"),dataExpression=""===dataAttr?"{}":dataAttr,initExpression=this.$el.getAttribute("x-init"),createdExpression=this.$el.getAttribute("x-created"),mountedExpression=this.$el.getAttribute("x-mounted"),unobservedData=saferEval(dataExpression,{});var initReturnedCallback;this.$data=this.wrapDataInObservable(unobservedData),unobservedData.$el=this.$el,unobservedData.$refs=this.getRefsProxy(),this.nextTickStack=[],unobservedData.$nextTick=callback=>{this.nextTickStack.push(callback)},this.showDirectiveStack=[],this.showDirectiveLastElement,initExpression&&(this.pauseReactivity=!0,initReturnedCallback=this.evaluateReturnExpression(this.$el,initExpression),this.pauseReactivity=!1),createdExpression&&(console.warn('AlpineJS Warning: "x-created" is deprecated and will be removed in the next major version. Use "x-init" instead.'),this.pauseReactivity=!0,saferEvalNoReturn(this.$el.getAttribute("x-created"),this.$data),this.pauseReactivity=!1),this.initializeElements(this.$el),this.listenForNewElementsToInitialize(),"function"==typeof initReturnedCallback&&initReturnedCallback.call(this.$data),mountedExpression&&(console.warn('AlpineJS Warning: "x-mounted" is deprecated and will be removed in the next major version. Use "x-init" (with a callback return) for the same behavior.'),saferEvalNoReturn(mountedExpression,this.$data))}wrapDataInObservable(data){var self=this;const proxyHandler={set(obj,property,value){const setWasSuccessful=Reflect.set(obj,property,deepProxy(value,proxyHandler));return self.pauseReactivity?setWasSuccessful:((func=()=>{for(self.updateElements(self.$el);self.nextTickStack.length>0;)self.nextTickStack.shift()()},wait=0,function(){var context=this,args=arguments,later=function(){timeout=null,func.apply(context,args)};clearTimeout(timeout),timeout=setTimeout(later,wait)})(),setWasSuccessful);var func,wait,timeout},get:(target,key)=>"$isAlpineProxy"===key||target[key]};return deepProxy(data,proxyHandler)}walkAndSkipNestedComponents(el,callback,initializeComponentCallback=(()=>{})){!function walk(el,callback){if(!1===callback(el))return;let node=el.firstElementChild;for(;node;)walk(node,callback),node=node.nextElementSibling}(el,el=>el.hasAttribute("x-data")&&!el.isSameNode(this.$el)?(el.__x||initializeComponentCallback(el),!1):callback(el))}initializeElements(rootEl,extraVars=(()=>{})){for(this.walkAndSkipNestedComponents(rootEl,el=>{if(void 0!==el.__x_for_key)return!1;this.initializeElement(el,extraVars)},el=>{el.__x=new Component(el)}),this.executeAndClearRemainingShowDirectiveStack();this.nextTickStack.length>0;)this.nextTickStack.shift()()}initializeElement(el,extraVars){el.hasAttribute("class")&&getXAttrs(el).length>0&&(el.__x_original_classes=el.getAttribute("class").split(" ")),this.registerListeners(el,extraVars),this.resolveBoundAttributes(el,!0,extraVars)}updateElements(rootEl,extraVars=(()=>{})){for(this.walkAndSkipNestedComponents(rootEl,el=>{if(void 0!==el.__x_for_key&&!el.isSameNode(this.$el))return!1;this.updateElement(el,extraVars)},el=>{el.__x=new Component(el)}),this.executeAndClearRemainingShowDirectiveStack();this.nextTickStack.length>0;)this.nextTickStack.shift()()}executeAndClearRemainingShowDirectiveStack(){this.showDirectiveStack.reverse().map(thing=>new Promise(resolve=>{thing(finish=>{resolve(finish)})})).reduce((nestedPromise,promise)=>nestedPromise.then(()=>promise.then(finish=>finish())),Promise.resolve(()=>{})),this.showDirectiveStack=[],this.showDirectiveLastElement=void 0}updateElement(el,extraVars){this.resolveBoundAttributes(el,!1,extraVars)}registerListeners(el,extraVars){getXAttrs(el).forEach(({type:type,value:value,modifiers:modifiers,expression:expression})=>{switch(type){case"on":registerListener(this,el,value,modifiers,expression,extraVars);break;case"model":!function(component,el,modifiers,expression,extraVars){var event="select"===el.tagName.toLowerCase()||["checkbox","radio"].includes(el.type)||modifiers.includes("lazy")?"change":"input";registerListener(component,el,event,modifiers,`${expression} = rightSideOfExpression($event, ${expression})`,()=>_objectSpread2({},extraVars(),{rightSideOfExpression:generateModelAssignmentFunction(el,modifiers,expression)}))}(this,el,modifiers,expression,extraVars)}})}resolveBoundAttributes(el,initialUpdate=!1,extraVars){getXAttrs(el).forEach(({type:type,value:value,modifiers:modifiers,expression:expression})=>{switch(type){case"model":handleAttributeBindingDirective(this,el,"value",expression,extraVars);break;case"bind":if("template"===el.tagName.toLowerCase()&&"key"===value)return;handleAttributeBindingDirective(this,el,value,expression,extraVars);break;case"text":void 0===(output=this.evaluateReturnExpression(el,expression,extraVars))&&expression.match(/\./).length&&(output=""),el.innerText=output;break;case"html":el.innerHTML=this.evaluateReturnExpression(el,expression,extraVars);break;case"show":var output=this.evaluateReturnExpression(el,expression,extraVars);!function(component,el,value,modifiers,initialUpdate=!1){const handle=resolve=>{value?(""!==el.style.display&&transitionIn(el,()=>{1===el.style.length?el.removeAttribute("style"):el.style.removeProperty("display")},initialUpdate),resolve(()=>{})):"none"!==el.style.display?transitionOut(el,()=>{resolve(()=>{el.style.display="none"})},initialUpdate):resolve(()=>{})};modifiers.includes("immediate")?handle(finish=>finish()):(component.showDirectiveLastElement&&!component.showDirectiveLastElement.contains(el)&&component.executeAndClearRemainingShowDirectiveStack(),component.showDirectiveStack.push(handle),component.showDirectiveLastElement=el)}(this,el,output,modifiers,initialUpdate);break;case"if":output=this.evaluateReturnExpression(el,expression,extraVars);!function(el,expressionResult,initialUpdate){"template"!==el.nodeName.toLowerCase()&&console.warn("Alpine: [x-if] directive should only be added to <template> tags. See https://github.com/alpinejs/alpine#x-if");const elementHasAlreadyBeenAdded=el.nextElementSibling&&!0===el.nextElementSibling.__x_inserted_me;if(expressionResult&&!elementHasAlreadyBeenAdded){const clone=document.importNode(el.content,!0);el.parentElement.insertBefore(clone,el.nextElementSibling),el.nextElementSibling.__x_inserted_me=!0,transitionIn(el.nextElementSibling,()=>{},initialUpdate)}else!expressionResult&&elementHasAlreadyBeenAdded&&transitionOut(el.nextElementSibling,()=>{el.nextElementSibling.remove()},initialUpdate)}(el,output,initialUpdate);break;case"for":handleForDirective(this,el,expression,initialUpdate);break;case"cloak":el.removeAttribute("x-cloak")}})}evaluateReturnExpression(el,expression,extraVars=(()=>{})){return saferEval(expression,this.$data,_objectSpread2({},extraVars(),{$dispatch:this.getDispatchFunction(el)}))}evaluateCommandExpression(el,expression,extraVars=(()=>{})){return saferEvalNoReturn(expression,this.$data,_objectSpread2({},extraVars(),{$dispatch:this.getDispatchFunction(el)}))}getDispatchFunction(el){return(event,detail={})=>{el.dispatchEvent(new CustomEvent(event,{detail:detail,bubbles:!0}))}}listenForNewElementsToInitialize(){const targetNode=this.$el;new MutationObserver(mutations=>{for(let i=0;i<mutations.length;i++){const closestParentComponent=mutations[i].target.closest("[x-data]");if(!closestParentComponent||!closestParentComponent.isSameNode(this.$el))return;if("attributes"===mutations[i].type&&"x-data"===mutations[i].attributeName){const rawData=saferEval(mutations[i].target.getAttribute("x-data"),{});Object.keys(rawData).forEach(key=>{this.$data[key]!==rawData[key]&&(this.$data[key]=rawData[key])})}mutations[i].addedNodes.length>0&&mutations[i].addedNodes.forEach(node=>{1===node.nodeType&&(node.matches("[x-data]")?node.__x=new Component(node):this.initializeElements(node))})}}).observe(targetNode,{childList:!0,attributes:!0,subtree:!0})}getRefsProxy(){var self=this;return new Proxy({},{get(object,property){return"$isAlpineProxy"===property||(self.walkAndSkipNestedComponents(self.$el,el=>{el.hasAttribute("x-ref")&&el.getAttribute("x-ref")===property&&(ref=el)}),ref);var ref}})}}const Alpine={start:async function(){isTesting()||await new Promise(resolve=>{"loading"==document.readyState?document.addEventListener("DOMContentLoaded",resolve):resolve()}),this.discoverComponents(el=>{this.initializeComponent(el)}),document.addEventListener("turbolinks:load",()=>{this.discoverUninitializedComponents(el=>{this.initializeComponent(el)})}),this.listenForNewUninitializedComponentsAtRunTime(el=>{this.initializeComponent(el)})},discoverComponents:function(callback){document.querySelectorAll("[x-data]").forEach(rootEl=>{callback(rootEl)})},discoverUninitializedComponents:function(callback,el=null){const rootEls=(el||document).querySelectorAll("[x-data]");Array.from(rootEls).filter(el=>void 0===el.__x).forEach(rootEl=>{callback(rootEl)})},listenForNewUninitializedComponentsAtRunTime:function(callback){const targetNode=document.querySelector("body");new MutationObserver(mutations=>{for(let i=0;i<mutations.length;i++)mutations[i].addedNodes.length>0&&mutations[i].addedNodes.forEach(node=>{1===node.nodeType&&(node.parentElement&&node.parentElement.closest("[x-data]")||this.discoverUninitializedComponents(el=>{this.initializeComponent(el)},node.parentElement))})}).observe(targetNode,{childList:!0,attributes:!0,subtree:!0})},initializeComponent:function(el){el.__x||(el.__x=new Component(el))}};return isTesting()||(window.Alpine=Alpine,window.Alpine.start()),Alpine}));
-//# sourceMappingURL=alpine.js.map
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CLASSES": () => (/* binding */ CLASSES),
+/* harmony export */   "CLASS_ACTIVE": () => (/* binding */ CLASS_ACTIVE),
+/* harmony export */   "CLASS_ARROW": () => (/* binding */ CLASS_ARROW),
+/* harmony export */   "CLASS_ARROWS": () => (/* binding */ CLASS_ARROWS),
+/* harmony export */   "CLASS_ARROW_NEXT": () => (/* binding */ CLASS_ARROW_NEXT),
+/* harmony export */   "CLASS_ARROW_PREV": () => (/* binding */ CLASS_ARROW_PREV),
+/* harmony export */   "CLASS_AUTOPLAY": () => (/* binding */ CLASS_AUTOPLAY),
+/* harmony export */   "CLASS_CLONE": () => (/* binding */ CLASS_CLONE),
+/* harmony export */   "CLASS_CONTAINER": () => (/* binding */ CLASS_CONTAINER),
+/* harmony export */   "CLASS_INITIALIZED": () => (/* binding */ CLASS_INITIALIZED),
+/* harmony export */   "CLASS_LIST": () => (/* binding */ CLASS_LIST),
+/* harmony export */   "CLASS_LOADING": () => (/* binding */ CLASS_LOADING),
+/* harmony export */   "CLASS_NEXT": () => (/* binding */ CLASS_NEXT),
+/* harmony export */   "CLASS_PAGINATION": () => (/* binding */ CLASS_PAGINATION),
+/* harmony export */   "CLASS_PAGINATION_PAGE": () => (/* binding */ CLASS_PAGINATION_PAGE),
+/* harmony export */   "CLASS_PAUSE": () => (/* binding */ CLASS_PAUSE),
+/* harmony export */   "CLASS_PLAY": () => (/* binding */ CLASS_PLAY),
+/* harmony export */   "CLASS_PREV": () => (/* binding */ CLASS_PREV),
+/* harmony export */   "CLASS_PROGRESS": () => (/* binding */ CLASS_PROGRESS),
+/* harmony export */   "CLASS_PROGRESS_BAR": () => (/* binding */ CLASS_PROGRESS_BAR),
+/* harmony export */   "CLASS_ROOT": () => (/* binding */ CLASS_ROOT),
+/* harmony export */   "CLASS_SLIDE": () => (/* binding */ CLASS_SLIDE),
+/* harmony export */   "CLASS_SLIDER": () => (/* binding */ CLASS_SLIDER),
+/* harmony export */   "CLASS_SPINNER": () => (/* binding */ CLASS_SPINNER),
+/* harmony export */   "CLASS_TRACK": () => (/* binding */ CLASS_TRACK),
+/* harmony export */   "CLASS_VISIBLE": () => (/* binding */ CLASS_VISIBLE),
+/* harmony export */   "EVENT_ACTIVE": () => (/* binding */ EVENT_ACTIVE),
+/* harmony export */   "EVENT_ARROWS_MOUNTED": () => (/* binding */ EVENT_ARROWS_MOUNTED),
+/* harmony export */   "EVENT_ARROWS_UPDATED": () => (/* binding */ EVENT_ARROWS_UPDATED),
+/* harmony export */   "EVENT_AUTOPLAY_PAUSE": () => (/* binding */ EVENT_AUTOPLAY_PAUSE),
+/* harmony export */   "EVENT_AUTOPLAY_PLAY": () => (/* binding */ EVENT_AUTOPLAY_PLAY),
+/* harmony export */   "EVENT_AUTOPLAY_PLAYING": () => (/* binding */ EVENT_AUTOPLAY_PLAYING),
+/* harmony export */   "EVENT_CLICK": () => (/* binding */ EVENT_CLICK),
+/* harmony export */   "EVENT_DESTROY": () => (/* binding */ EVENT_DESTROY),
+/* harmony export */   "EVENT_DRAG": () => (/* binding */ EVENT_DRAG),
+/* harmony export */   "EVENT_DRAGGED": () => (/* binding */ EVENT_DRAGGED),
+/* harmony export */   "EVENT_DRAGGING": () => (/* binding */ EVENT_DRAGGING),
+/* harmony export */   "EVENT_HIDDEN": () => (/* binding */ EVENT_HIDDEN),
+/* harmony export */   "EVENT_INACTIVE": () => (/* binding */ EVENT_INACTIVE),
+/* harmony export */   "EVENT_LAZYLOAD_LOADED": () => (/* binding */ EVENT_LAZYLOAD_LOADED),
+/* harmony export */   "EVENT_MOUNTED": () => (/* binding */ EVENT_MOUNTED),
+/* harmony export */   "EVENT_MOVE": () => (/* binding */ EVENT_MOVE),
+/* harmony export */   "EVENT_MOVED": () => (/* binding */ EVENT_MOVED),
+/* harmony export */   "EVENT_NAVIGATION_MOUNTED": () => (/* binding */ EVENT_NAVIGATION_MOUNTED),
+/* harmony export */   "EVENT_PAGINATION_MOUNTED": () => (/* binding */ EVENT_PAGINATION_MOUNTED),
+/* harmony export */   "EVENT_PAGINATION_UPDATED": () => (/* binding */ EVENT_PAGINATION_UPDATED),
+/* harmony export */   "EVENT_READY": () => (/* binding */ EVENT_READY),
+/* harmony export */   "EVENT_REFRESH": () => (/* binding */ EVENT_REFRESH),
+/* harmony export */   "EVENT_REPOSITIONED": () => (/* binding */ EVENT_REPOSITIONED),
+/* harmony export */   "EVENT_RESIZE": () => (/* binding */ EVENT_RESIZE),
+/* harmony export */   "EVENT_RESIZED": () => (/* binding */ EVENT_RESIZED),
+/* harmony export */   "EVENT_SCROLL": () => (/* binding */ EVENT_SCROLL),
+/* harmony export */   "EVENT_SCROLLED": () => (/* binding */ EVENT_SCROLLED),
+/* harmony export */   "EVENT_SHIFTED": () => (/* binding */ EVENT_SHIFTED),
+/* harmony export */   "EVENT_SLIDE_KEYDOWN": () => (/* binding */ EVENT_SLIDE_KEYDOWN),
+/* harmony export */   "EVENT_UPDATED": () => (/* binding */ EVENT_UPDATED),
+/* harmony export */   "EVENT_VISIBLE": () => (/* binding */ EVENT_VISIBLE),
+/* harmony export */   "EventBus": () => (/* binding */ EventBus),
+/* harmony export */   "EventInterface": () => (/* binding */ EventInterface),
+/* harmony export */   "RequestInterval": () => (/* binding */ RequestInterval),
+/* harmony export */   "STATUS_CLASSES": () => (/* binding */ STATUS_CLASSES),
+/* harmony export */   "Splide": () => (/* binding */ Splide),
+/* harmony export */   "SplideRenderer": () => (/* binding */ SplideRenderer),
+/* harmony export */   "State": () => (/* binding */ State),
+/* harmony export */   "Throttle": () => (/* binding */ Throttle),
+/* harmony export */   "default": () => (/* binding */ Splide)
+/* harmony export */ });
+/*!
+ * Splide.js
+ * Version  : 3.6.12
+ * License  : MIT
+ * Copyright: 2022 Naotoshi Fujita
+ */
+const PROJECT_CODE = "splide";
+const DATA_ATTRIBUTE = `data-${PROJECT_CODE}`;
+
+const CREATED = 1;
+const MOUNTED = 2;
+const IDLE = 3;
+const MOVING = 4;
+const DESTROYED = 5;
+const STATES = {
+  CREATED,
+  MOUNTED,
+  IDLE,
+  MOVING,
+  DESTROYED
+};
+
+const DEFAULT_EVENT_PRIORITY = 10;
+const DEFAULT_USER_EVENT_PRIORITY = 20;
+
+function empty(array) {
+  array.length = 0;
+}
+
+function isObject(subject) {
+  return !isNull(subject) && typeof subject === "object";
+}
+function isArray(subject) {
+  return Array.isArray(subject);
+}
+function isFunction(subject) {
+  return typeof subject === "function";
+}
+function isString(subject) {
+  return typeof subject === "string";
+}
+function isUndefined(subject) {
+  return typeof subject === "undefined";
+}
+function isNull(subject) {
+  return subject === null;
+}
+function isHTMLElement(subject) {
+  return subject instanceof HTMLElement;
+}
+
+function toArray(value) {
+  return isArray(value) ? value : [value];
+}
+
+function forEach(values, iteratee) {
+  toArray(values).forEach(iteratee);
+}
+
+function includes(array, value) {
+  return array.indexOf(value) > -1;
+}
+
+function push(array, items) {
+  array.push(...toArray(items));
+  return array;
+}
+
+const arrayProto = Array.prototype;
+
+function slice(arrayLike, start, end) {
+  return arrayProto.slice.call(arrayLike, start, end);
+}
+
+function find(arrayLike, predicate) {
+  return slice(arrayLike).filter(predicate)[0];
+}
+
+function toggleClass(elm, classes, add) {
+  if (elm) {
+    forEach(classes, (name) => {
+      if (name) {
+        elm.classList[add ? "add" : "remove"](name);
+      }
+    });
+  }
+}
+
+function addClass(elm, classes) {
+  toggleClass(elm, isString(classes) ? classes.split(" ") : classes, true);
+}
+
+function append(parent, children) {
+  forEach(children, parent.appendChild.bind(parent));
+}
+
+function before(nodes, ref) {
+  forEach(nodes, (node) => {
+    const parent = ref.parentNode;
+    if (parent) {
+      parent.insertBefore(node, ref);
+    }
+  });
+}
+
+function matches(elm, selector) {
+  return isHTMLElement(elm) && (elm["msMatchesSelector"] || elm.matches).call(elm, selector);
+}
+
+function children(parent, selector) {
+  return parent ? slice(parent.children).filter((child) => matches(child, selector)) : [];
+}
+
+function child(parent, selector) {
+  return selector ? children(parent, selector)[0] : parent.firstElementChild;
+}
+
+function forOwn(object, iteratee, right) {
+  if (object) {
+    let keys = Object.keys(object);
+    keys = right ? keys.reverse() : keys;
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i];
+      if (key !== "__proto__") {
+        if (iteratee(object[key], key) === false) {
+          break;
+        }
+      }
+    }
+  }
+  return object;
+}
+
+function assign(object) {
+  slice(arguments, 1).forEach((source) => {
+    forOwn(source, (value, key) => {
+      object[key] = source[key];
+    });
+  });
+  return object;
+}
+
+function merge(object, source) {
+  forOwn(source, (value, key) => {
+    if (isArray(value)) {
+      object[key] = value.slice();
+    } else if (isObject(value)) {
+      object[key] = merge(isObject(object[key]) ? object[key] : {}, value);
+    } else {
+      object[key] = value;
+    }
+  });
+  return object;
+}
+
+function removeAttribute(elm, attrs) {
+  if (elm) {
+    forEach(attrs, (attr) => {
+      elm.removeAttribute(attr);
+    });
+  }
+}
+
+function setAttribute(elm, attrs, value) {
+  if (isObject(attrs)) {
+    forOwn(attrs, (value2, name) => {
+      setAttribute(elm, name, value2);
+    });
+  } else {
+    isNull(value) ? removeAttribute(elm, attrs) : elm.setAttribute(attrs, String(value));
+  }
+}
+
+function create(tag, attrs, parent) {
+  const elm = document.createElement(tag);
+  if (attrs) {
+    isString(attrs) ? addClass(elm, attrs) : setAttribute(elm, attrs);
+  }
+  parent && append(parent, elm);
+  return elm;
+}
+
+function style(elm, prop, value) {
+  if (isUndefined(value)) {
+    return getComputedStyle(elm)[prop];
+  }
+  if (!isNull(value)) {
+    const { style: style2 } = elm;
+    value = `${value}`;
+    if (style2[prop] !== value) {
+      style2[prop] = value;
+    }
+  }
+}
+
+function display(elm, display2) {
+  style(elm, "display", display2);
+}
+
+function focus(elm) {
+  elm["setActive"] && elm["setActive"]() || elm.focus({ preventScroll: true });
+}
+
+function getAttribute(elm, attr) {
+  return elm.getAttribute(attr);
+}
+
+function hasClass(elm, className) {
+  return elm && elm.classList.contains(className);
+}
+
+function rect(target) {
+  return target.getBoundingClientRect();
+}
+
+function remove(nodes) {
+  forEach(nodes, (node) => {
+    if (node && node.parentNode) {
+      node.parentNode.removeChild(node);
+    }
+  });
+}
+
+function measure(parent, value) {
+  if (isString(value)) {
+    const div = create("div", { style: `width: ${value}; position: absolute;` }, parent);
+    value = rect(div).width;
+    remove(div);
+  }
+  return value;
+}
+
+function parseHtml(html) {
+  return child(new DOMParser().parseFromString(html, "text/html").body);
+}
+
+function prevent(e, stopPropagation) {
+  e.preventDefault();
+  if (stopPropagation) {
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+  }
+}
+
+function query(parent, selector) {
+  return parent && parent.querySelector(selector);
+}
+
+function queryAll(parent, selector) {
+  return slice(parent.querySelectorAll(selector));
+}
+
+function removeClass(elm, classes) {
+  toggleClass(elm, classes, false);
+}
+
+function unit(value) {
+  return isString(value) ? value : value ? `${value}px` : "";
+}
+
+function assert(condition, message = "") {
+  if (!condition) {
+    throw new Error(`[${PROJECT_CODE}] ${message}`);
+  }
+}
+
+function nextTick(callback) {
+  setTimeout(callback);
+}
+
+const noop = () => {
+};
+
+function raf(func) {
+  return requestAnimationFrame(func);
+}
+
+const { min, max, floor, ceil, abs } = Math;
+
+function approximatelyEqual(x, y, epsilon) {
+  return abs(x - y) < epsilon;
+}
+
+function between(number, minOrMax, maxOrMin, exclusive) {
+  const minimum = min(minOrMax, maxOrMin);
+  const maximum = max(minOrMax, maxOrMin);
+  return exclusive ? minimum < number && number < maximum : minimum <= number && number <= maximum;
+}
+
+function clamp(number, x, y) {
+  const minimum = min(x, y);
+  const maximum = max(x, y);
+  return min(max(minimum, number), maximum);
+}
+
+function sign(x) {
+  return +(x > 0) - +(x < 0);
+}
+
+function camelToKebab(string) {
+  return string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+}
+
+function format(string, replacements) {
+  forEach(replacements, (replacement) => {
+    string = string.replace("%s", `${replacement}`);
+  });
+  return string;
+}
+
+function pad(number) {
+  return number < 10 ? `0${number}` : `${number}`;
+}
+
+const ids = {};
+function uniqueId(prefix) {
+  return `${prefix}${pad(ids[prefix] = (ids[prefix] || 0) + 1)}`;
+}
+
+function EventBus() {
+  let handlers = {};
+  function on(events, callback, key, priority = DEFAULT_EVENT_PRIORITY) {
+    forEachEvent(events, (event, namespace) => {
+      handlers[event] = handlers[event] || [];
+      push(handlers[event], {
+        _event: event,
+        _callback: callback,
+        _namespace: namespace,
+        _priority: priority,
+        _key: key
+      }).sort((handler1, handler2) => handler1._priority - handler2._priority);
+    });
+  }
+  function off(events, key) {
+    forEachEvent(events, (event, namespace) => {
+      const eventHandlers = handlers[event];
+      handlers[event] = eventHandlers && eventHandlers.filter((handler) => {
+        return handler._key ? handler._key !== key : key || handler._namespace !== namespace;
+      });
+    });
+  }
+  function offBy(key) {
+    forOwn(handlers, (eventHandlers, event) => {
+      off(event, key);
+    });
+  }
+  function emit(event) {
+    (handlers[event] || []).forEach((handler) => {
+      handler._callback.apply(handler, slice(arguments, 1));
+    });
+  }
+  function destroy() {
+    handlers = {};
+  }
+  function forEachEvent(events, iteratee) {
+    toArray(events).join(" ").split(" ").forEach((eventNS) => {
+      const fragments = eventNS.split(".");
+      iteratee(fragments[0], fragments[1]);
+    });
+  }
+  return {
+    on,
+    off,
+    offBy,
+    emit,
+    destroy
+  };
+}
+
+const EVENT_MOUNTED = "mounted";
+const EVENT_READY = "ready";
+const EVENT_MOVE = "move";
+const EVENT_MOVED = "moved";
+const EVENT_SHIFTED = "shifted";
+const EVENT_CLICK = "click";
+const EVENT_ACTIVE = "active";
+const EVENT_INACTIVE = "inactive";
+const EVENT_VISIBLE = "visible";
+const EVENT_HIDDEN = "hidden";
+const EVENT_SLIDE_KEYDOWN = "slide:keydown";
+const EVENT_REFRESH = "refresh";
+const EVENT_UPDATED = "updated";
+const EVENT_RESIZE = "resize";
+const EVENT_RESIZED = "resized";
+const EVENT_REPOSITIONED = "repositioned";
+const EVENT_DRAG = "drag";
+const EVENT_DRAGGING = "dragging";
+const EVENT_DRAGGED = "dragged";
+const EVENT_SCROLL = "scroll";
+const EVENT_SCROLLED = "scrolled";
+const EVENT_DESTROY = "destroy";
+const EVENT_ARROWS_MOUNTED = "arrows:mounted";
+const EVENT_ARROWS_UPDATED = "arrows:updated";
+const EVENT_PAGINATION_MOUNTED = "pagination:mounted";
+const EVENT_PAGINATION_UPDATED = "pagination:updated";
+const EVENT_NAVIGATION_MOUNTED = "navigation:mounted";
+const EVENT_AUTOPLAY_PLAY = "autoplay:play";
+const EVENT_AUTOPLAY_PLAYING = "autoplay:playing";
+const EVENT_AUTOPLAY_PAUSE = "autoplay:pause";
+const EVENT_LAZYLOAD_LOADED = "lazyload:loaded";
+
+function EventInterface(Splide2) {
+  const { event } = Splide2;
+  const key = {};
+  let listeners = [];
+  function on(events, callback, priority) {
+    event.on(events, callback, key, priority);
+  }
+  function off(events) {
+    event.off(events, key);
+  }
+  function bind(targets, events, callback, options) {
+    forEachEvent(targets, events, (target, event2) => {
+      listeners.push([target, event2, callback, options]);
+      target.addEventListener(event2, callback, options);
+    });
+  }
+  function unbind(targets, events, callback) {
+    forEachEvent(targets, events, (target, event2) => {
+      listeners = listeners.filter((listener) => {
+        if (listener[0] === target && listener[1] === event2 && (!callback || listener[2] === callback)) {
+          target.removeEventListener(event2, listener[2], listener[3]);
+          return false;
+        }
+        return true;
+      });
+    });
+  }
+  function forEachEvent(targets, events, iteratee) {
+    forEach(targets, (target) => {
+      if (target) {
+        events.split(" ").forEach(iteratee.bind(null, target));
+      }
+    });
+  }
+  function destroy() {
+    listeners = listeners.filter((data) => unbind(data[0], data[1]));
+    event.offBy(key);
+  }
+  event.on(EVENT_DESTROY, destroy, key);
+  return {
+    on,
+    off,
+    emit: event.emit,
+    bind,
+    unbind,
+    destroy
+  };
+}
+
+function RequestInterval(interval, onInterval, onUpdate, limit) {
+  const { now } = Date;
+  let startTime;
+  let rate = 0;
+  let id;
+  let paused = true;
+  let count = 0;
+  function update() {
+    if (!paused) {
+      const elapsed = now() - startTime;
+      if (elapsed >= interval) {
+        rate = 1;
+        startTime = now();
+      } else {
+        rate = elapsed / interval;
+      }
+      if (onUpdate) {
+        onUpdate(rate);
+      }
+      if (rate === 1) {
+        onInterval();
+        if (limit && ++count >= limit) {
+          return pause();
+        }
+      }
+      raf(update);
+    }
+  }
+  function start(resume) {
+    !resume && cancel();
+    startTime = now() - (resume ? rate * interval : 0);
+    paused = false;
+    raf(update);
+  }
+  function pause() {
+    paused = true;
+  }
+  function rewind() {
+    startTime = now();
+    rate = 0;
+    if (onUpdate) {
+      onUpdate(rate);
+    }
+  }
+  function cancel() {
+    cancelAnimationFrame(id);
+    rate = 0;
+    id = 0;
+    paused = true;
+  }
+  function set(time) {
+    interval = time;
+  }
+  function isPaused() {
+    return paused;
+  }
+  return {
+    start,
+    rewind,
+    pause,
+    cancel,
+    set,
+    isPaused
+  };
+}
+
+function State(initialState) {
+  let state = initialState;
+  function set(value) {
+    state = value;
+  }
+  function is(states) {
+    return includes(toArray(states), state);
+  }
+  return { set, is };
+}
+
+function Throttle(func, duration) {
+  let interval;
+  function throttled() {
+    if (!interval) {
+      interval = RequestInterval(duration || 0, () => {
+        func.apply(this, arguments);
+        interval = null;
+      }, null, 1);
+      interval.start();
+    }
+  }
+  return throttled;
+}
+
+function Options(Splide2, Components2, options) {
+  const throttledObserve = Throttle(observe);
+  let initialOptions;
+  let points;
+  let currPoint;
+  function setup() {
+    try {
+      merge(options, JSON.parse(getAttribute(Splide2.root, DATA_ATTRIBUTE)));
+    } catch (e) {
+      assert(false, e.message);
+    }
+    initialOptions = merge({}, options);
+    const { breakpoints } = options;
+    if (breakpoints) {
+      const isMin = options.mediaQuery === "min";
+      points = Object.keys(breakpoints).sort((n, m) => isMin ? +m - +n : +n - +m).map((point) => [
+        point,
+        matchMedia(`(${isMin ? "min" : "max"}-width:${point}px)`)
+      ]);
+      observe();
+    }
+  }
+  function mount() {
+    if (points) {
+      addEventListener("resize", throttledObserve);
+    }
+  }
+  function destroy(completely) {
+    if (completely) {
+      removeEventListener("resize", throttledObserve);
+    }
+  }
+  function observe() {
+    const item = find(points, (item2) => item2[1].matches) || [];
+    if (item[0] !== currPoint) {
+      onMatch(currPoint = item[0]);
+    }
+  }
+  function onMatch(point) {
+    const newOptions = options.breakpoints[point] || initialOptions;
+    if (newOptions.destroy) {
+      Splide2.options = initialOptions;
+      Splide2.destroy(newOptions.destroy === "completely");
+    } else {
+      if (Splide2.state.is(DESTROYED)) {
+        destroy(true);
+        Splide2.mount();
+      }
+      Splide2.options = newOptions;
+    }
+  }
+  return {
+    setup,
+    mount,
+    destroy
+  };
+}
+
+const RTL = "rtl";
+const TTB = "ttb";
+
+const ORIENTATION_MAP = {
+  marginRight: ["marginBottom", "marginLeft"],
+  autoWidth: ["autoHeight"],
+  fixedWidth: ["fixedHeight"],
+  paddingLeft: ["paddingTop", "paddingRight"],
+  paddingRight: ["paddingBottom", "paddingLeft"],
+  width: ["height"],
+  left: ["top", "right"],
+  right: ["bottom", "left"],
+  x: ["y"],
+  X: ["Y"],
+  Y: ["X"],
+  ArrowLeft: ["ArrowUp", "ArrowRight"],
+  ArrowRight: ["ArrowDown", "ArrowLeft"]
+};
+function Direction(Splide2, Components2, options) {
+  function resolve(prop, axisOnly) {
+    const { direction } = options;
+    const index = direction === RTL && !axisOnly ? 1 : direction === TTB ? 0 : -1;
+    return ORIENTATION_MAP[prop][index] || prop;
+  }
+  function orient(value) {
+    return value * (options.direction === RTL ? 1 : -1);
+  }
+  return {
+    resolve,
+    orient
+  };
+}
+
+const CLASS_ROOT = PROJECT_CODE;
+const CLASS_SLIDER = `${PROJECT_CODE}__slider`;
+const CLASS_TRACK = `${PROJECT_CODE}__track`;
+const CLASS_LIST = `${PROJECT_CODE}__list`;
+const CLASS_SLIDE = `${PROJECT_CODE}__slide`;
+const CLASS_CLONE = `${CLASS_SLIDE}--clone`;
+const CLASS_CONTAINER = `${CLASS_SLIDE}__container`;
+const CLASS_ARROWS = `${PROJECT_CODE}__arrows`;
+const CLASS_ARROW = `${PROJECT_CODE}__arrow`;
+const CLASS_ARROW_PREV = `${CLASS_ARROW}--prev`;
+const CLASS_ARROW_NEXT = `${CLASS_ARROW}--next`;
+const CLASS_PAGINATION = `${PROJECT_CODE}__pagination`;
+const CLASS_PAGINATION_PAGE = `${CLASS_PAGINATION}__page`;
+const CLASS_PROGRESS = `${PROJECT_CODE}__progress`;
+const CLASS_PROGRESS_BAR = `${CLASS_PROGRESS}__bar`;
+const CLASS_AUTOPLAY = `${PROJECT_CODE}__autoplay`;
+const CLASS_PLAY = `${PROJECT_CODE}__play`;
+const CLASS_PAUSE = `${PROJECT_CODE}__pause`;
+const CLASS_SPINNER = `${PROJECT_CODE}__spinner`;
+const CLASS_INITIALIZED = "is-initialized";
+const CLASS_ACTIVE = "is-active";
+const CLASS_PREV = "is-prev";
+const CLASS_NEXT = "is-next";
+const CLASS_VISIBLE = "is-visible";
+const CLASS_LOADING = "is-loading";
+const STATUS_CLASSES = [CLASS_ACTIVE, CLASS_VISIBLE, CLASS_PREV, CLASS_NEXT, CLASS_LOADING];
+const CLASSES = {
+  slide: CLASS_SLIDE,
+  clone: CLASS_CLONE,
+  arrows: CLASS_ARROWS,
+  arrow: CLASS_ARROW,
+  prev: CLASS_ARROW_PREV,
+  next: CLASS_ARROW_NEXT,
+  pagination: CLASS_PAGINATION,
+  page: CLASS_PAGINATION_PAGE,
+  spinner: CLASS_SPINNER
+};
+
+function Elements(Splide2, Components2, options) {
+  const { on } = EventInterface(Splide2);
+  const { root } = Splide2;
+  const elements = {};
+  const slides = [];
+  let classes;
+  let slider;
+  let track;
+  let list;
+  function setup() {
+    collect();
+    identify();
+    addClass(root, classes = getClasses());
+  }
+  function mount() {
+    on(EVENT_REFRESH, refresh, DEFAULT_EVENT_PRIORITY - 2);
+    on(EVENT_UPDATED, update);
+  }
+  function destroy() {
+    [root, track, list].forEach((elm) => {
+      removeAttribute(elm, "style");
+    });
+    empty(slides);
+    removeClass(root, classes);
+  }
+  function refresh() {
+    destroy();
+    setup();
+  }
+  function update() {
+    removeClass(root, classes);
+    addClass(root, classes = getClasses());
+  }
+  function collect() {
+    slider = child(root, `.${CLASS_SLIDER}`);
+    track = query(root, `.${CLASS_TRACK}`);
+    list = child(track, `.${CLASS_LIST}`);
+    assert(track && list, "A track/list element is missing.");
+    push(slides, children(list, `.${CLASS_SLIDE}:not(.${CLASS_CLONE})`));
+    const autoplay = find(`.${CLASS_AUTOPLAY}`);
+    const arrows = find(`.${CLASS_ARROWS}`);
+    assign(elements, {
+      root,
+      slider,
+      track,
+      list,
+      slides,
+      arrows,
+      autoplay,
+      prev: query(arrows, `.${CLASS_ARROW_PREV}`),
+      next: query(arrows, `.${CLASS_ARROW_NEXT}`),
+      bar: query(find(`.${CLASS_PROGRESS}`), `.${CLASS_PROGRESS_BAR}`),
+      play: query(autoplay, `.${CLASS_PLAY}`),
+      pause: query(autoplay, `.${CLASS_PAUSE}`)
+    });
+  }
+  function identify() {
+    const id = root.id || uniqueId(PROJECT_CODE);
+    root.id = id;
+    track.id = track.id || `${id}-track`;
+    list.id = list.id || `${id}-list`;
+  }
+  function find(selector) {
+    return child(root, selector) || child(slider, selector);
+  }
+  function getClasses() {
+    return [
+      `${CLASS_ROOT}--${options.type}`,
+      `${CLASS_ROOT}--${options.direction}`,
+      options.drag && `${CLASS_ROOT}--draggable`,
+      options.isNavigation && `${CLASS_ROOT}--nav`,
+      CLASS_ACTIVE
+    ];
+  }
+  return assign(elements, {
+    setup,
+    mount,
+    destroy
+  });
+}
+
+const ROLE = "role";
+const ARIA_CONTROLS = "aria-controls";
+const ARIA_CURRENT = "aria-current";
+const ARIA_LABEL = "aria-label";
+const ARIA_HIDDEN = "aria-hidden";
+const TAB_INDEX = "tabindex";
+const DISABLED = "disabled";
+const ARIA_ORIENTATION = "aria-orientation";
+const ALL_ATTRIBUTES = [
+  ROLE,
+  ARIA_CONTROLS,
+  ARIA_CURRENT,
+  ARIA_LABEL,
+  ARIA_HIDDEN,
+  ARIA_ORIENTATION,
+  TAB_INDEX,
+  DISABLED
+];
+
+const SLIDE = "slide";
+const LOOP = "loop";
+const FADE = "fade";
+
+function Slide$1(Splide2, index, slideIndex, slide) {
+  const { on, emit, bind, destroy: destroyEvents } = EventInterface(Splide2);
+  const { Components, root, options } = Splide2;
+  const { isNavigation, updateOnMove } = options;
+  const { resolve } = Components.Direction;
+  const styles = getAttribute(slide, "style");
+  const isClone = slideIndex > -1;
+  const container = child(slide, `.${CLASS_CONTAINER}`);
+  const focusableNodes = options.focusableNodes && queryAll(slide, options.focusableNodes);
+  let destroyed;
+  function mount() {
+    if (!isClone) {
+      slide.id = `${root.id}-slide${pad(index + 1)}`;
+    }
+    bind(slide, "click keydown", (e) => {
+      emit(e.type === "click" ? EVENT_CLICK : EVENT_SLIDE_KEYDOWN, self, e);
+    });
+    on([EVENT_REFRESH, EVENT_REPOSITIONED, EVENT_SHIFTED, EVENT_MOVED, EVENT_SCROLLED], update);
+    on(EVENT_NAVIGATION_MOUNTED, initNavigation);
+    if (updateOnMove) {
+      on(EVENT_MOVE, onMove);
+    }
+  }
+  function destroy() {
+    destroyed = true;
+    destroyEvents();
+    removeClass(slide, STATUS_CLASSES);
+    removeAttribute(slide, ALL_ATTRIBUTES);
+    setAttribute(slide, "style", styles);
+  }
+  function initNavigation() {
+    const idx = isClone ? slideIndex : index;
+    const label = format(options.i18n.slideX, idx + 1);
+    const controls = Splide2.splides.map((target) => target.splide.root.id).join(" ");
+    setAttribute(slide, ARIA_LABEL, label);
+    setAttribute(slide, ARIA_CONTROLS, controls);
+    setAttribute(slide, ROLE, "menuitem");
+    updateActivity(isActive());
+  }
+  function onMove() {
+    if (!destroyed) {
+      update();
+    }
+  }
+  function update() {
+    if (!destroyed) {
+      const { index: currIndex } = Splide2;
+      updateActivity(isActive());
+      updateVisibility(isVisible());
+      toggleClass(slide, CLASS_PREV, index === currIndex - 1);
+      toggleClass(slide, CLASS_NEXT, index === currIndex + 1);
+    }
+  }
+  function updateActivity(active) {
+    if (active !== hasClass(slide, CLASS_ACTIVE)) {
+      toggleClass(slide, CLASS_ACTIVE, active);
+      if (isNavigation) {
+        setAttribute(slide, ARIA_CURRENT, active || null);
+      }
+      emit(active ? EVENT_ACTIVE : EVENT_INACTIVE, self);
+    }
+  }
+  function updateVisibility(visible) {
+    const hidden = !visible && (!isActive() || isClone);
+    setAttribute(slide, ARIA_HIDDEN, hidden || null);
+    setAttribute(slide, TAB_INDEX, !hidden && options.slideFocus ? 0 : null);
+    if (focusableNodes) {
+      focusableNodes.forEach((node) => {
+        setAttribute(node, TAB_INDEX, hidden ? -1 : null);
+      });
+    }
+    if (visible !== hasClass(slide, CLASS_VISIBLE)) {
+      toggleClass(slide, CLASS_VISIBLE, visible);
+      emit(visible ? EVENT_VISIBLE : EVENT_HIDDEN, self);
+    }
+  }
+  function style$1(prop, value, useContainer) {
+    style(useContainer && container || slide, prop, value);
+  }
+  function isActive() {
+    const { index: curr } = Splide2;
+    return curr === index || options.cloneStatus && curr === slideIndex;
+  }
+  function isVisible() {
+    if (Splide2.is(FADE)) {
+      return isActive();
+    }
+    const trackRect = rect(Components.Elements.track);
+    const slideRect = rect(slide);
+    const left = resolve("left");
+    const right = resolve("right");
+    return floor(trackRect[left]) <= ceil(slideRect[left]) && floor(slideRect[right]) <= ceil(trackRect[right]);
+  }
+  function isWithin(from, distance) {
+    let diff = abs(from - index);
+    if (!isClone && (options.rewind || Splide2.is(LOOP))) {
+      diff = min(diff, Splide2.length - diff);
+    }
+    return diff <= distance;
+  }
+  const self = {
+    index,
+    slideIndex,
+    slide,
+    container,
+    isClone,
+    mount,
+    destroy,
+    update,
+    style: style$1,
+    isWithin
+  };
+  return self;
+}
+
+function Slides(Splide2, Components2, options) {
+  const { on, emit, bind } = EventInterface(Splide2);
+  const { slides, list } = Components2.Elements;
+  const Slides2 = [];
+  function mount() {
+    init();
+    on(EVENT_REFRESH, refresh);
+    on([EVENT_MOUNTED, EVENT_REFRESH], () => {
+      Slides2.sort((Slide1, Slide2) => Slide1.index - Slide2.index);
+    });
+  }
+  function init() {
+    slides.forEach((slide, index) => {
+      register(slide, index, -1);
+    });
+  }
+  function destroy() {
+    forEach$1((Slide2) => {
+      Slide2.destroy();
+    });
+    empty(Slides2);
+  }
+  function refresh() {
+    destroy();
+    init();
+  }
+  function update() {
+    forEach$1((Slide2) => {
+      Slide2.update();
+    });
+  }
+  function register(slide, index, slideIndex) {
+    const object = Slide$1(Splide2, index, slideIndex, slide);
+    object.mount();
+    Slides2.push(object);
+  }
+  function get(excludeClones) {
+    return excludeClones ? filter((Slide2) => !Slide2.isClone) : Slides2;
+  }
+  function getIn(page) {
+    const { Controller } = Components2;
+    const index = Controller.toIndex(page);
+    const max = Controller.hasFocus() ? 1 : options.perPage;
+    return filter((Slide2) => between(Slide2.index, index, index + max - 1));
+  }
+  function getAt(index) {
+    return filter(index)[0];
+  }
+  function add(items, index) {
+    forEach(items, (slide) => {
+      if (isString(slide)) {
+        slide = parseHtml(slide);
+      }
+      if (isHTMLElement(slide)) {
+        const ref = slides[index];
+        ref ? before(slide, ref) : append(list, slide);
+        addClass(slide, options.classes.slide);
+        observeImages(slide, emit.bind(null, EVENT_RESIZE));
+      }
+    });
+    emit(EVENT_REFRESH);
+  }
+  function remove$1(matcher) {
+    remove(filter(matcher).map((Slide2) => Slide2.slide));
+    emit(EVENT_REFRESH);
+  }
+  function forEach$1(iteratee, excludeClones) {
+    get(excludeClones).forEach(iteratee);
+  }
+  function filter(matcher) {
+    return Slides2.filter(isFunction(matcher) ? matcher : (Slide2) => isString(matcher) ? matches(Slide2.slide, matcher) : includes(toArray(matcher), Slide2.index));
+  }
+  function style(prop, value, useContainer) {
+    forEach$1((Slide2) => {
+      Slide2.style(prop, value, useContainer);
+    });
+  }
+  function observeImages(elm, callback) {
+    const images = queryAll(elm, "img");
+    let { length } = images;
+    if (length) {
+      images.forEach((img) => {
+        bind(img, "load error", () => {
+          if (!--length) {
+            callback();
+          }
+        });
+      });
+    } else {
+      callback();
+    }
+  }
+  function getLength(excludeClones) {
+    return excludeClones ? slides.length : Slides2.length;
+  }
+  function isEnough() {
+    return Slides2.length > options.perPage;
+  }
+  return {
+    mount,
+    destroy,
+    update,
+    register,
+    get,
+    getIn,
+    getAt,
+    add,
+    remove: remove$1,
+    forEach: forEach$1,
+    filter,
+    style,
+    getLength,
+    isEnough
+  };
+}
+
+function Layout(Splide2, Components2, options) {
+  const { on, bind, emit } = EventInterface(Splide2);
+  const { Slides } = Components2;
+  const { resolve } = Components2.Direction;
+  const { root, track, list } = Components2.Elements;
+  const { getAt } = Slides;
+  let vertical;
+  let rootRect;
+  function mount() {
+    init();
+    bind(window, "resize load", Throttle(emit.bind(this, EVENT_RESIZE)));
+    on([EVENT_UPDATED, EVENT_REFRESH], init);
+    on(EVENT_RESIZE, resize);
+  }
+  function init() {
+    rootRect = null;
+    vertical = options.direction === TTB;
+    style(root, "maxWidth", unit(options.width));
+    style(track, resolve("paddingLeft"), cssPadding(false));
+    style(track, resolve("paddingRight"), cssPadding(true));
+    resize();
+  }
+  function resize() {
+    const newRect = rect(root);
+    if (!rootRect || rootRect.width !== newRect.width || rootRect.height !== newRect.height) {
+      style(track, "height", cssTrackHeight());
+      Slides.style(resolve("marginRight"), unit(options.gap));
+      Slides.style("width", cssSlideWidth() || null);
+      setSlidesHeight();
+      rootRect = newRect;
+      emit(EVENT_RESIZED);
+    }
+  }
+  function setSlidesHeight() {
+    Slides.style("height", cssSlideHeight() || null, true);
+  }
+  function cssPadding(right) {
+    const { padding } = options;
+    const prop = resolve(right ? "right" : "left");
+    return padding && unit(padding[prop] || (isObject(padding) ? 0 : padding)) || "0px";
+  }
+  function cssTrackHeight() {
+    let height = "";
+    if (vertical) {
+      height = cssHeight();
+      assert(height, "height or heightRatio is missing.");
+      height = `calc(${height} - ${cssPadding(false)} - ${cssPadding(true)})`;
+    }
+    return height;
+  }
+  function cssHeight() {
+    return unit(options.height || rect(list).width * options.heightRatio);
+  }
+  function cssSlideWidth() {
+    return options.autoWidth ? "" : unit(options.fixedWidth) || (vertical ? "" : cssSlideSize());
+  }
+  function cssSlideHeight() {
+    return unit(options.fixedHeight) || (vertical ? options.autoHeight ? "" : cssSlideSize() : cssHeight());
+  }
+  function cssSlideSize() {
+    const gap = unit(options.gap);
+    return `calc((100%${gap && ` + ${gap}`})/${options.perPage || 1}${gap && ` - ${gap}`})`;
+  }
+  function listSize() {
+    return rect(list)[resolve("width")];
+  }
+  function slideSize(index, withoutGap) {
+    const Slide = getAt(index || 0);
+    return Slide ? rect(Slide.slide)[resolve("width")] + (withoutGap ? 0 : getGap()) : 0;
+  }
+  function totalSize(index, withoutGap) {
+    const Slide = getAt(index);
+    if (Slide) {
+      const right = rect(Slide.slide)[resolve("right")];
+      const left = rect(list)[resolve("left")];
+      return abs(right - left) + (withoutGap ? 0 : getGap());
+    }
+    return 0;
+  }
+  function sliderSize() {
+    return totalSize(Splide2.length - 1, true) - totalSize(-1, true);
+  }
+  function getGap() {
+    const Slide = getAt(0);
+    return Slide && parseFloat(style(Slide.slide, resolve("marginRight"))) || 0;
+  }
+  function getPadding(right) {
+    return parseFloat(style(track, resolve(`padding${right ? "Right" : "Left"}`))) || 0;
+  }
+  return {
+    mount,
+    listSize,
+    slideSize,
+    sliderSize,
+    totalSize,
+    getPadding
+  };
+}
+
+function Clones(Splide2, Components2, options) {
+  const { on, emit } = EventInterface(Splide2);
+  const { Elements, Slides } = Components2;
+  const { resolve } = Components2.Direction;
+  const clones = [];
+  let cloneCount;
+  function mount() {
+    init();
+    on(EVENT_REFRESH, refresh);
+    on([EVENT_UPDATED, EVENT_RESIZE], observe);
+  }
+  function init() {
+    if (cloneCount = computeCloneCount()) {
+      generate(cloneCount);
+      emit(EVENT_RESIZE);
+    }
+  }
+  function destroy() {
+    remove(clones);
+    empty(clones);
+  }
+  function refresh() {
+    destroy();
+    init();
+  }
+  function observe() {
+    if (cloneCount < computeCloneCount()) {
+      emit(EVENT_REFRESH);
+    }
+  }
+  function generate(count) {
+    const slides = Slides.get().slice();
+    const { length } = slides;
+    if (length) {
+      while (slides.length < count) {
+        push(slides, slides);
+      }
+      push(slides.slice(-count), slides.slice(0, count)).forEach((Slide, index) => {
+        const isHead = index < count;
+        const clone = cloneDeep(Slide.slide, index);
+        isHead ? before(clone, slides[0].slide) : append(Elements.list, clone);
+        push(clones, clone);
+        Slides.register(clone, index - count + (isHead ? 0 : length), Slide.index);
+      });
+    }
+  }
+  function cloneDeep(elm, index) {
+    const clone = elm.cloneNode(true);
+    addClass(clone, options.classes.clone);
+    clone.id = `${Splide2.root.id}-clone${pad(index + 1)}`;
+    return clone;
+  }
+  function computeCloneCount() {
+    let { clones: clones2 } = options;
+    if (!Splide2.is(LOOP)) {
+      clones2 = 0;
+    } else if (!clones2) {
+      const fixedSize = measure(Elements.list, options[resolve("fixedWidth")]);
+      const fixedCount = fixedSize && ceil(rect(Elements.track)[resolve("width")] / fixedSize);
+      const baseCount = fixedCount || options[resolve("autoWidth")] && Splide2.length || options.perPage;
+      clones2 = baseCount * (options.drag ? (options.flickMaxPages || 1) + 1 : 2);
+    }
+    return clones2;
+  }
+  return {
+    mount,
+    destroy
+  };
+}
+
+function Move(Splide2, Components2, options) {
+  const { on, emit } = EventInterface(Splide2);
+  const { slideSize, getPadding, totalSize, listSize, sliderSize } = Components2.Layout;
+  const { resolve, orient } = Components2.Direction;
+  const { list, track } = Components2.Elements;
+  let Transition;
+  function mount() {
+    Transition = Components2.Transition;
+    on([EVENT_MOUNTED, EVENT_RESIZED, EVENT_UPDATED, EVENT_REFRESH], reposition);
+  }
+  function destroy() {
+    removeAttribute(list, "style");
+  }
+  function reposition() {
+    if (!isBusy()) {
+      Components2.Scroll.cancel();
+      jump(Splide2.index);
+      emit(EVENT_REPOSITIONED);
+    }
+  }
+  function move(dest, index, prev, callback) {
+    if (!isBusy()) {
+      const { set } = Splide2.state;
+      const position = getPosition();
+      if (dest !== index) {
+        Transition.cancel();
+        translate(shift(position, dest > index), true);
+      }
+      set(MOVING);
+      emit(EVENT_MOVE, index, prev, dest);
+      Transition.start(index, () => {
+        set(IDLE);
+        emit(EVENT_MOVED, index, prev, dest);
+        if (options.trimSpace === "move" && dest !== prev && position === getPosition()) {
+          Components2.Controller.go(dest > prev ? ">" : "<", false, callback);
+        } else {
+          callback && callback();
+        }
+      });
+    }
+  }
+  function jump(index) {
+    translate(toPosition(index, true));
+  }
+  function translate(position, preventLoop) {
+    if (!Splide2.is(FADE)) {
+      const destination = preventLoop ? position : loop(position);
+      list.style.transform = `translate${resolve("X")}(${destination}px)`;
+      position !== destination && emit(EVENT_SHIFTED);
+    }
+  }
+  function loop(position) {
+    if (Splide2.is(LOOP)) {
+      const diff = orient(position - getPosition());
+      const exceededMin = exceededLimit(false, position) && diff < 0;
+      const exceededMax = exceededLimit(true, position) && diff > 0;
+      if (exceededMin || exceededMax) {
+        position = shift(position, exceededMax);
+      }
+    }
+    return position;
+  }
+  function shift(position, backwards) {
+    const excess = position - getLimit(backwards);
+    const size = sliderSize();
+    position -= orient(size * (ceil(abs(excess) / size) || 1)) * (backwards ? 1 : -1);
+    return position;
+  }
+  function cancel() {
+    translate(getPosition());
+    Transition.cancel();
+  }
+  function toIndex(position) {
+    const Slides = Components2.Slides.get();
+    let index = 0;
+    let minDistance = Infinity;
+    for (let i = 0; i < Slides.length; i++) {
+      const slideIndex = Slides[i].index;
+      const distance = abs(toPosition(slideIndex, true) - position);
+      if (distance <= minDistance) {
+        minDistance = distance;
+        index = slideIndex;
+      } else {
+        break;
+      }
+    }
+    return index;
+  }
+  function toPosition(index, trimming) {
+    const position = orient(totalSize(index - 1) - offset(index));
+    return trimming ? trim(position) : position;
+  }
+  function getPosition() {
+    const left = resolve("left");
+    return rect(list)[left] - rect(track)[left] + orient(getPadding(false));
+  }
+  function trim(position) {
+    if (options.trimSpace && Splide2.is(SLIDE)) {
+      position = clamp(position, 0, orient(sliderSize() - listSize()));
+    }
+    return position;
+  }
+  function offset(index) {
+    const { focus } = options;
+    return focus === "center" ? (listSize() - slideSize(index, true)) / 2 : +focus * slideSize(index) || 0;
+  }
+  function getLimit(max) {
+    return toPosition(max ? Components2.Controller.getEnd() : 0, !!options.trimSpace);
+  }
+  function isBusy() {
+    return Splide2.state.is(MOVING) && options.waitForTransition;
+  }
+  function exceededLimit(max, position) {
+    position = isUndefined(position) ? getPosition() : position;
+    const exceededMin = max !== true && orient(position) < orient(getLimit(false));
+    const exceededMax = max !== false && orient(position) > orient(getLimit(true));
+    return exceededMin || exceededMax;
+  }
+  return {
+    mount,
+    destroy,
+    move,
+    jump,
+    translate,
+    shift,
+    cancel,
+    toIndex,
+    toPosition,
+    getPosition,
+    getLimit,
+    isBusy,
+    exceededLimit
+  };
+}
+
+function Controller(Splide2, Components2, options) {
+  const { on } = EventInterface(Splide2);
+  const { Move } = Components2;
+  const { getPosition, getLimit } = Move;
+  const { isEnough, getLength } = Components2.Slides;
+  const isLoop = Splide2.is(LOOP);
+  const isSlide = Splide2.is(SLIDE);
+  let currIndex = options.start || 0;
+  let prevIndex = currIndex;
+  let slideCount;
+  let perMove;
+  let perPage;
+  function mount() {
+    init();
+    on([EVENT_UPDATED, EVENT_REFRESH], init, DEFAULT_EVENT_PRIORITY - 1);
+  }
+  function init() {
+    slideCount = getLength(true);
+    perMove = options.perMove;
+    perPage = options.perPage;
+    currIndex = clamp(currIndex, 0, slideCount - 1);
+  }
+  function go(control, allowSameIndex, callback) {
+    const dest = parse(control);
+    if (options.useScroll) {
+      scroll(dest, true, true, options.speed, callback);
+    } else {
+      const index = loop(dest);
+      if (index > -1 && !Move.isBusy() && (allowSameIndex || index !== currIndex)) {
+        setIndex(index);
+        Move.move(dest, index, prevIndex, callback);
+      }
+    }
+  }
+  function scroll(destination, useIndex, snap, duration, callback) {
+    const dest = useIndex ? destination : toDest(destination);
+    Components2.Scroll.scroll(useIndex || snap ? Move.toPosition(dest, true) : destination, duration, () => {
+      setIndex(Move.toIndex(Move.getPosition()));
+      callback && callback();
+    });
+  }
+  function parse(control) {
+    let index = currIndex;
+    if (isString(control)) {
+      const [, indicator, number] = control.match(/([+\-<>])(\d+)?/) || [];
+      if (indicator === "+" || indicator === "-") {
+        index = computeDestIndex(currIndex + +`${indicator}${+number || 1}`, currIndex, true);
+      } else if (indicator === ">") {
+        index = number ? toIndex(+number) : getNext(true);
+      } else if (indicator === "<") {
+        index = getPrev(true);
+      }
+    } else {
+      index = isLoop ? control : clamp(control, 0, getEnd());
+    }
+    return index;
+  }
+  function getNext(destination) {
+    return getAdjacent(false, destination);
+  }
+  function getPrev(destination) {
+    return getAdjacent(true, destination);
+  }
+  function getAdjacent(prev, destination) {
+    const number = perMove || (hasFocus() ? 1 : perPage);
+    const dest = computeDestIndex(currIndex + number * (prev ? -1 : 1), currIndex);
+    if (dest === -1 && isSlide) {
+      if (!approximatelyEqual(getPosition(), getLimit(!prev), 1)) {
+        return prev ? 0 : getEnd();
+      }
+    }
+    return destination ? dest : loop(dest);
+  }
+  function computeDestIndex(dest, from, incremental) {
+    if (isEnough()) {
+      const end = getEnd();
+      if (dest < 0 || dest > end) {
+        if (between(0, dest, from, true) || between(end, from, dest, true)) {
+          dest = toIndex(toPage(dest));
+        } else {
+          if (isLoop) {
+            dest = perMove || hasFocus() ? dest : dest < 0 ? -(slideCount % perPage || perPage) : slideCount;
+          } else if (options.rewind) {
+            dest = dest < 0 ? end : 0;
+          } else {
+            dest = -1;
+          }
+        }
+      } else {
+        if (!incremental && dest !== from) {
+          dest = perMove ? dest : toIndex(toPage(from) + (dest < from ? -1 : 1));
+        }
+      }
+    } else {
+      dest = -1;
+    }
+    return dest;
+  }
+  function getEnd() {
+    let end = slideCount - perPage;
+    if (hasFocus() || isLoop && perMove) {
+      end = slideCount - 1;
+    }
+    return max(end, 0);
+  }
+  function loop(index) {
+    if (isLoop) {
+      return isEnough() ? index % slideCount + (index < 0 ? slideCount : 0) : -1;
+    }
+    return index;
+  }
+  function toIndex(page) {
+    return clamp(hasFocus() ? page : perPage * page, 0, getEnd());
+  }
+  function toPage(index) {
+    if (!hasFocus()) {
+      index = between(index, slideCount - perPage, slideCount - 1) ? slideCount - 1 : index;
+      index = floor(index / perPage);
+    }
+    return index;
+  }
+  function toDest(destination) {
+    const closest = Move.toIndex(destination);
+    return isSlide ? clamp(closest, 0, getEnd()) : closest;
+  }
+  function setIndex(index) {
+    if (index !== currIndex) {
+      prevIndex = currIndex;
+      currIndex = index;
+    }
+  }
+  function getIndex(prev) {
+    return prev ? prevIndex : currIndex;
+  }
+  function hasFocus() {
+    return !isUndefined(options.focus) || options.isNavigation;
+  }
+  return {
+    mount,
+    go,
+    scroll,
+    getNext,
+    getPrev,
+    getAdjacent,
+    getEnd,
+    setIndex,
+    getIndex,
+    toIndex,
+    toPage,
+    toDest,
+    hasFocus
+  };
+}
+
+const XML_NAME_SPACE = "http://www.w3.org/2000/svg";
+const PATH = "m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z";
+const SIZE = 40;
+
+function Arrows(Splide2, Components2, options) {
+  const { on, bind, emit } = EventInterface(Splide2);
+  const { classes, i18n } = options;
+  const { Elements, Controller } = Components2;
+  let wrapper = Elements.arrows;
+  let prev = Elements.prev;
+  let next = Elements.next;
+  let created;
+  const arrows = {};
+  function mount() {
+    init();
+    on(EVENT_UPDATED, init);
+  }
+  function init() {
+    if (options.arrows) {
+      if (!prev || !next) {
+        createArrows();
+      }
+    }
+    if (prev && next) {
+      if (!arrows.prev) {
+        const { id } = Elements.track;
+        setAttribute(prev, ARIA_CONTROLS, id);
+        setAttribute(next, ARIA_CONTROLS, id);
+        arrows.prev = prev;
+        arrows.next = next;
+        listen();
+        emit(EVENT_ARROWS_MOUNTED, prev, next);
+      } else {
+        display(wrapper, options.arrows === false ? "none" : "");
+      }
+    }
+  }
+  function destroy() {
+    if (created) {
+      remove(wrapper);
+    } else {
+      removeAttribute(prev, ALL_ATTRIBUTES);
+      removeAttribute(next, ALL_ATTRIBUTES);
+    }
+  }
+  function listen() {
+    const { go } = Controller;
+    on([EVENT_MOUNTED, EVENT_MOVED, EVENT_UPDATED, EVENT_REFRESH, EVENT_SCROLLED], update);
+    bind(next, "click", () => {
+      go(">", true);
+    });
+    bind(prev, "click", () => {
+      go("<", true);
+    });
+  }
+  function createArrows() {
+    wrapper = create("div", classes.arrows);
+    prev = createArrow(true);
+    next = createArrow(false);
+    created = true;
+    append(wrapper, [prev, next]);
+    before(wrapper, child(options.arrows === "slider" && Elements.slider || Splide2.root));
+  }
+  function createArrow(prev2) {
+    const arrow = `<button class="${classes.arrow} ${prev2 ? classes.prev : classes.next}" type="button"><svg xmlns="${XML_NAME_SPACE}" viewBox="0 0 ${SIZE} ${SIZE}" width="${SIZE}" height="${SIZE}"><path d="${options.arrowPath || PATH}" />`;
+    return parseHtml(arrow);
+  }
+  function update() {
+    const index = Splide2.index;
+    const prevIndex = Controller.getPrev();
+    const nextIndex = Controller.getNext();
+    const prevLabel = prevIndex > -1 && index < prevIndex ? i18n.last : i18n.prev;
+    const nextLabel = nextIndex > -1 && index > nextIndex ? i18n.first : i18n.next;
+    prev.disabled = prevIndex < 0;
+    next.disabled = nextIndex < 0;
+    setAttribute(prev, ARIA_LABEL, prevLabel);
+    setAttribute(next, ARIA_LABEL, nextLabel);
+    emit(EVENT_ARROWS_UPDATED, prev, next, prevIndex, nextIndex);
+  }
+  return {
+    arrows,
+    mount,
+    destroy
+  };
+}
+
+const INTERVAL_DATA_ATTRIBUTE = `${DATA_ATTRIBUTE}-interval`;
+
+function Autoplay(Splide2, Components2, options) {
+  const { on, bind, emit } = EventInterface(Splide2);
+  const interval = RequestInterval(options.interval, Splide2.go.bind(Splide2, ">"), update);
+  const { isPaused } = interval;
+  const { Elements } = Components2;
+  let hovered;
+  let focused;
+  let paused;
+  function mount() {
+    const { autoplay } = options;
+    if (autoplay) {
+      initButton(true);
+      initButton(false);
+      listen();
+      if (autoplay !== "pause") {
+        play();
+      }
+    }
+  }
+  function initButton(forPause) {
+    const prop = forPause ? "pause" : "play";
+    const button = Elements[prop];
+    if (button) {
+      setAttribute(button, ARIA_CONTROLS, Elements.track.id);
+      setAttribute(button, ARIA_LABEL, options.i18n[prop]);
+      bind(button, "click", forPause ? pause : play);
+    }
+  }
+  function listen() {
+    const { root } = Elements;
+    if (options.pauseOnHover) {
+      bind(root, "mouseenter mouseleave", (e) => {
+        hovered = e.type === "mouseenter";
+        autoToggle();
+      });
+    }
+    if (options.pauseOnFocus) {
+      bind(root, "focusin focusout", (e) => {
+        focused = e.type === "focusin";
+        autoToggle();
+      });
+    }
+    on([EVENT_MOVE, EVENT_SCROLL, EVENT_REFRESH], interval.rewind);
+    on(EVENT_MOVE, updateInterval);
+  }
+  function play() {
+    if (isPaused() && Components2.Slides.isEnough()) {
+      interval.start(!options.resetProgress);
+      focused = hovered = paused = false;
+      emit(EVENT_AUTOPLAY_PLAY);
+    }
+  }
+  function pause(manual = true) {
+    if (!isPaused()) {
+      interval.pause();
+      emit(EVENT_AUTOPLAY_PAUSE);
+    }
+    paused = manual;
+  }
+  function autoToggle() {
+    if (!paused) {
+      if (!hovered && !focused) {
+        play();
+      } else {
+        pause(false);
+      }
+    }
+  }
+  function update(rate) {
+    const { bar } = Elements;
+    bar && style(bar, "width", `${rate * 100}%`);
+    emit(EVENT_AUTOPLAY_PLAYING, rate);
+  }
+  function updateInterval() {
+    const Slide = Components2.Slides.getAt(Splide2.index);
+    interval.set(Slide && +getAttribute(Slide.slide, INTERVAL_DATA_ATTRIBUTE) || options.interval);
+  }
+  return {
+    mount,
+    destroy: interval.cancel,
+    play,
+    pause,
+    isPaused
+  };
+}
+
+function Cover(Splide2, Components2, options) {
+  const { on } = EventInterface(Splide2);
+  function mount() {
+    if (options.cover) {
+      on(EVENT_LAZYLOAD_LOADED, (img, Slide) => {
+        toggle(true, img, Slide);
+      });
+      on([EVENT_MOUNTED, EVENT_UPDATED, EVENT_REFRESH], apply.bind(null, true));
+    }
+  }
+  function destroy() {
+    apply(false);
+  }
+  function apply(cover) {
+    Components2.Slides.forEach((Slide) => {
+      const img = child(Slide.container || Slide.slide, "img");
+      if (img && img.src) {
+        toggle(cover, img, Slide);
+      }
+    });
+  }
+  function toggle(cover, img, Slide) {
+    Slide.style("background", cover ? `center/cover no-repeat url("${img.src}")` : "", true);
+    display(img, cover ? "none" : "");
+  }
+  return {
+    mount,
+    destroy
+  };
+}
+
+const BOUNCE_DIFF_THRESHOLD = 10;
+const BOUNCE_DURATION = 600;
+const FRICTION_FACTOR = 0.6;
+const BASE_VELOCITY = 1.5;
+const MIN_DURATION = 800;
+
+function Scroll(Splide2, Components2, options) {
+  const { on, emit } = EventInterface(Splide2);
+  const { Move } = Components2;
+  const { getPosition, getLimit, exceededLimit } = Move;
+  let interval;
+  let scrollCallback;
+  function mount() {
+    on(EVENT_MOVE, clear);
+    on([EVENT_UPDATED, EVENT_REFRESH], cancel);
+  }
+  function scroll(destination, duration, callback, suppressConstraint) {
+    const start = getPosition();
+    let friction = 1;
+    duration = duration || computeDuration(abs(destination - start));
+    scrollCallback = callback;
+    clear();
+    interval = RequestInterval(duration, onScrolled, (rate) => {
+      const position = getPosition();
+      const target = start + (destination - start) * easing(rate);
+      const diff = (target - getPosition()) * friction;
+      Move.translate(position + diff);
+      if (Splide2.is(SLIDE) && !suppressConstraint && exceededLimit()) {
+        friction *= FRICTION_FACTOR;
+        if (abs(diff) < BOUNCE_DIFF_THRESHOLD) {
+          bounce(exceededLimit(false));
+        }
+      }
+    }, 1);
+    emit(EVENT_SCROLL);
+    interval.start();
+  }
+  function bounce(backwards) {
+    scroll(getLimit(!backwards), BOUNCE_DURATION, null, true);
+  }
+  function onScrolled() {
+    const position = getPosition();
+    const index = Move.toIndex(position);
+    if (!between(index, 0, Splide2.length - 1)) {
+      Move.translate(Move.shift(position, index > 0), true);
+    }
+    scrollCallback && scrollCallback();
+    emit(EVENT_SCROLLED);
+  }
+  function computeDuration(distance) {
+    return max(distance / BASE_VELOCITY, MIN_DURATION);
+  }
+  function clear() {
+    if (interval) {
+      interval.cancel();
+    }
+  }
+  function cancel() {
+    if (interval && !interval.isPaused()) {
+      clear();
+      onScrolled();
+    }
+  }
+  function easing(t) {
+    const { easingFunc } = options;
+    return easingFunc ? easingFunc(t) : 1 - Math.pow(1 - t, 4);
+  }
+  return {
+    mount,
+    destroy: clear,
+    scroll,
+    cancel
+  };
+}
+
+const SCROLL_LISTENER_OPTIONS = { passive: false, capture: true };
+
+const FRICTION = 5;
+const LOG_INTERVAL = 200;
+const POINTER_DOWN_EVENTS = "touchstart mousedown";
+const POINTER_MOVE_EVENTS = "touchmove mousemove";
+const POINTER_UP_EVENTS = "touchend touchcancel mouseup";
+
+function Drag(Splide2, Components2, options) {
+  const { on, emit, bind, unbind } = EventInterface(Splide2);
+  const { Move, Scroll, Controller } = Components2;
+  const { track } = Components2.Elements;
+  const { resolve, orient } = Components2.Direction;
+  const { getPosition, exceededLimit } = Move;
+  let basePosition;
+  let baseEvent;
+  let prevBaseEvent;
+  let lastEvent;
+  let isFree;
+  let dragging;
+  let hasExceeded = false;
+  let clickPrevented;
+  let disabled;
+  let target;
+  function mount() {
+    bind(track, POINTER_MOVE_EVENTS, noop, SCROLL_LISTENER_OPTIONS);
+    bind(track, POINTER_UP_EVENTS, noop, SCROLL_LISTENER_OPTIONS);
+    bind(track, POINTER_DOWN_EVENTS, onPointerDown, SCROLL_LISTENER_OPTIONS);
+    bind(track, "click", onClick, { capture: true });
+    bind(track, "dragstart", prevent);
+    on([EVENT_MOUNTED, EVENT_UPDATED], init);
+  }
+  function init() {
+    const { drag } = options;
+    disable(!drag);
+    isFree = drag === "free";
+  }
+  function onPointerDown(e) {
+    if (!disabled) {
+      const { noDrag } = options;
+      const isTouch = isTouchEvent(e);
+      const isDraggable = !noDrag || !matches(e.target, noDrag);
+      clickPrevented = false;
+      if (isDraggable && (isTouch || !e.button)) {
+        if (!Move.isBusy()) {
+          target = isTouch ? track : window;
+          prevBaseEvent = null;
+          lastEvent = null;
+          bind(target, POINTER_MOVE_EVENTS, onPointerMove, SCROLL_LISTENER_OPTIONS);
+          bind(target, POINTER_UP_EVENTS, onPointerUp, SCROLL_LISTENER_OPTIONS);
+          Move.cancel();
+          Scroll.cancel();
+          save(e);
+        } else {
+          prevent(e, true);
+        }
+      }
+    }
+  }
+  function onPointerMove(e) {
+    if (!lastEvent) {
+      emit(EVENT_DRAG);
+    }
+    lastEvent = e;
+    if (e.cancelable) {
+      const diff = coordOf(e) - coordOf(baseEvent);
+      if (dragging) {
+        Move.translate(basePosition + constrain(diff));
+        const expired = timeOf(e) - timeOf(baseEvent) > LOG_INTERVAL;
+        const exceeded = hasExceeded !== (hasExceeded = exceededLimit());
+        if (expired || exceeded) {
+          save(e);
+        }
+        emit(EVENT_DRAGGING);
+        clickPrevented = true;
+        prevent(e);
+      } else {
+        let { dragMinThreshold: thresholds } = options;
+        thresholds = isObject(thresholds) ? thresholds : { mouse: 0, touch: +thresholds || 10 };
+        dragging = abs(diff) > (isTouchEvent(e) ? thresholds.touch : thresholds.mouse);
+        if (isSliderDirection()) {
+          prevent(e);
+        }
+      }
+    }
+  }
+  function onPointerUp(e) {
+    unbind(target, POINTER_MOVE_EVENTS, onPointerMove);
+    unbind(target, POINTER_UP_EVENTS, onPointerUp);
+    const { index } = Splide2;
+    if (lastEvent) {
+      if (dragging || e.cancelable && isSliderDirection()) {
+        const velocity = computeVelocity(e);
+        const destination = computeDestination(velocity);
+        if (isFree) {
+          Controller.scroll(destination);
+        } else if (Splide2.is(FADE)) {
+          Controller.go(index + orient(sign(velocity)));
+        } else {
+          Controller.go(Controller.toDest(destination), true);
+        }
+        prevent(e);
+      }
+      emit(EVENT_DRAGGED);
+    } else {
+      if (!isFree && getPosition() !== Move.toPosition(index)) {
+        Controller.go(index, true);
+      }
+    }
+    dragging = false;
+  }
+  function save(e) {
+    prevBaseEvent = baseEvent;
+    baseEvent = e;
+    basePosition = getPosition();
+  }
+  function onClick(e) {
+    if (!disabled && clickPrevented) {
+      prevent(e, true);
+    }
+  }
+  function isSliderDirection() {
+    const diffX = abs(coordOf(lastEvent) - coordOf(baseEvent));
+    const diffY = abs(coordOf(lastEvent, true) - coordOf(baseEvent, true));
+    return diffX > diffY;
+  }
+  function computeVelocity(e) {
+    if (Splide2.is(LOOP) || !hasExceeded) {
+      const base = baseEvent === lastEvent && prevBaseEvent || baseEvent;
+      const diffCoord = coordOf(lastEvent) - coordOf(base);
+      const diffTime = timeOf(e) - timeOf(base);
+      const isFlick = timeOf(e) - timeOf(lastEvent) < LOG_INTERVAL;
+      if (diffTime && isFlick) {
+        return diffCoord / diffTime;
+      }
+    }
+    return 0;
+  }
+  function computeDestination(velocity) {
+    return getPosition() + sign(velocity) * min(abs(velocity) * (options.flickPower || 600), isFree ? Infinity : Components2.Layout.listSize() * (options.flickMaxPages || 1));
+  }
+  function coordOf(e, orthogonal) {
+    return (isTouchEvent(e) ? e.touches[0] : e)[`page${resolve(orthogonal ? "Y" : "X")}`];
+  }
+  function timeOf(e) {
+    return e.timeStamp;
+  }
+  function constrain(diff) {
+    return diff / (hasExceeded && Splide2.is(SLIDE) ? FRICTION : 1);
+  }
+  function isTouchEvent(e) {
+    return typeof TouchEvent !== "undefined" && e instanceof TouchEvent;
+  }
+  function isDragging() {
+    return dragging;
+  }
+  function disable(value) {
+    disabled = value;
+  }
+  return {
+    mount,
+    disable,
+    isDragging
+  };
+}
+
+const IE_ARROW_KEYS = ["Left", "Right", "Up", "Down"];
+const KEYBOARD_EVENT = "keydown";
+function Keyboard(Splide2, Components2, options) {
+  const { on, bind, unbind } = EventInterface(Splide2);
+  const { root } = Splide2;
+  const { resolve } = Components2.Direction;
+  let target;
+  let disabled;
+  function mount() {
+    init();
+    on(EVENT_UPDATED, onUpdated);
+    on(EVENT_MOVE, onMove);
+  }
+  function init() {
+    const { keyboard } = options;
+    if (keyboard) {
+      if (keyboard === "focused") {
+        target = root;
+        setAttribute(root, TAB_INDEX, 0);
+      } else {
+        target = window;
+      }
+      bind(target, KEYBOARD_EVENT, onKeydown);
+    }
+  }
+  function destroy() {
+    unbind(target, KEYBOARD_EVENT);
+    if (isHTMLElement(target)) {
+      removeAttribute(target, TAB_INDEX);
+    }
+  }
+  function disable(value) {
+    disabled = value;
+  }
+  function onMove() {
+    const _disabled = disabled;
+    disabled = true;
+    nextTick(() => {
+      disabled = _disabled;
+    });
+  }
+  function onUpdated() {
+    destroy();
+    init();
+  }
+  function onKeydown(e) {
+    if (!disabled) {
+      const { key } = e;
+      const normalizedKey = includes(IE_ARROW_KEYS, key) ? `Arrow${key}` : key;
+      if (normalizedKey === resolve("ArrowLeft")) {
+        Splide2.go("<");
+      } else if (normalizedKey === resolve("ArrowRight")) {
+        Splide2.go(">");
+      }
+    }
+  }
+  return {
+    mount,
+    destroy,
+    disable
+  };
+}
+
+const SRC_DATA_ATTRIBUTE = `${DATA_ATTRIBUTE}-lazy`;
+const SRCSET_DATA_ATTRIBUTE = `${SRC_DATA_ATTRIBUTE}-srcset`;
+const IMAGE_SELECTOR = `[${SRC_DATA_ATTRIBUTE}], [${SRCSET_DATA_ATTRIBUTE}]`;
+
+function LazyLoad(Splide2, Components2, options) {
+  const { on, off, bind, emit } = EventInterface(Splide2);
+  const isSequential = options.lazyLoad === "sequential";
+  let images = [];
+  let index = 0;
+  function mount() {
+    if (options.lazyLoad) {
+      init();
+      on(EVENT_REFRESH, refresh);
+      if (!isSequential) {
+        on([EVENT_MOUNTED, EVENT_REFRESH, EVENT_MOVED, EVENT_SCROLLED], observe);
+      }
+    }
+  }
+  function refresh() {
+    destroy();
+    init();
+  }
+  function init() {
+    Components2.Slides.forEach((_Slide) => {
+      queryAll(_Slide.slide, IMAGE_SELECTOR).forEach((_img) => {
+        const src = getAttribute(_img, SRC_DATA_ATTRIBUTE);
+        const srcset = getAttribute(_img, SRCSET_DATA_ATTRIBUTE);
+        if (src !== _img.src || srcset !== _img.srcset) {
+          const className = options.classes.spinner;
+          const parent = _img.parentElement;
+          const _spinner = child(parent, `.${className}`) || create("span", className, parent);
+          setAttribute(_spinner, ROLE, "presentation");
+          images.push({ _img, _Slide, src, srcset, _spinner });
+          !_img.src && display(_img, "none");
+        }
+      });
+    });
+    if (isSequential) {
+      loadNext();
+    }
+  }
+  function destroy() {
+    index = 0;
+    images = [];
+  }
+  function observe() {
+    images = images.filter((data) => {
+      const distance = options.perPage * ((options.preloadPages || 1) + 1) - 1;
+      if (data._Slide.isWithin(Splide2.index, distance)) {
+        return load(data);
+      }
+      return true;
+    });
+    if (!images.length) {
+      off(EVENT_MOVED);
+    }
+  }
+  function load(data) {
+    const { _img } = data;
+    addClass(data._Slide.slide, CLASS_LOADING);
+    bind(_img, "load error", (e) => {
+      onLoad(data, e.type === "error");
+    });
+    ["srcset", "src"].forEach((name) => {
+      if (data[name]) {
+        setAttribute(_img, name, data[name]);
+        removeAttribute(_img, name === "src" ? SRC_DATA_ATTRIBUTE : SRCSET_DATA_ATTRIBUTE);
+      }
+    });
+  }
+  function onLoad(data, error) {
+    const { _Slide } = data;
+    removeClass(_Slide.slide, CLASS_LOADING);
+    if (!error) {
+      remove(data._spinner);
+      display(data._img, "");
+      emit(EVENT_LAZYLOAD_LOADED, data._img, _Slide);
+      emit(EVENT_RESIZE);
+    }
+    if (isSequential) {
+      loadNext();
+    }
+  }
+  function loadNext() {
+    if (index < images.length) {
+      load(images[index++]);
+    }
+  }
+  return {
+    mount,
+    destroy
+  };
+}
+
+function Pagination(Splide2, Components2, options) {
+  const { on, emit, bind, unbind } = EventInterface(Splide2);
+  const { Slides, Elements, Controller } = Components2;
+  const { hasFocus, getIndex } = Controller;
+  const items = [];
+  let list;
+  function mount() {
+    init();
+    on([EVENT_UPDATED, EVENT_REFRESH], init);
+    on([EVENT_MOVE, EVENT_SCROLLED], update);
+  }
+  function init() {
+    destroy();
+    if (options.pagination && Slides.isEnough()) {
+      createPagination();
+      emit(EVENT_PAGINATION_MOUNTED, { list, items }, getAt(Splide2.index));
+      update();
+    }
+  }
+  function destroy() {
+    if (list) {
+      remove(list);
+      items.forEach((item) => {
+        unbind(item.button, "click");
+      });
+      empty(items);
+      list = null;
+    }
+  }
+  function createPagination() {
+    const { length } = Splide2;
+    const { classes, i18n, perPage } = options;
+    const parent = options.pagination === "slider" && Elements.slider || Elements.root;
+    const max = hasFocus() ? length : ceil(length / perPage);
+    list = create("ul", classes.pagination, parent);
+    for (let i = 0; i < max; i++) {
+      const li = create("li", null, list);
+      const button = create("button", { class: classes.page, type: "button" }, li);
+      const controls = Slides.getIn(i).map((Slide) => Slide.slide.id);
+      const text = !hasFocus() && perPage > 1 ? i18n.pageX : i18n.slideX;
+      bind(button, "click", onClick.bind(null, i));
+      setAttribute(button, ARIA_CONTROLS, controls.join(" "));
+      setAttribute(button, ARIA_LABEL, format(text, i + 1));
+      items.push({ li, button, page: i });
+    }
+  }
+  function onClick(page) {
+    Controller.go(`>${page}`, true, () => {
+      const Slide = Slides.getAt(Controller.toIndex(page));
+      Slide && focus(Slide.slide);
+    });
+  }
+  function getAt(index) {
+    return items[Controller.toPage(index)];
+  }
+  function update() {
+    const prev = getAt(getIndex(true));
+    const curr = getAt(getIndex());
+    if (prev) {
+      removeClass(prev.button, CLASS_ACTIVE);
+      removeAttribute(prev.button, ARIA_CURRENT);
+    }
+    if (curr) {
+      addClass(curr.button, CLASS_ACTIVE);
+      setAttribute(curr.button, ARIA_CURRENT, true);
+    }
+    emit(EVENT_PAGINATION_UPDATED, { list, items }, prev, curr);
+  }
+  return {
+    items,
+    mount,
+    destroy,
+    getAt,
+    update
+  };
+}
+
+const TRIGGER_KEYS = [" ", "Enter", "Spacebar"];
+function Sync(Splide2, Components2, options) {
+  const { list } = Components2.Elements;
+  const events = [];
+  function mount() {
+    Splide2.splides.forEach((target) => {
+      !target.isParent && sync(target.splide);
+    });
+    if (options.isNavigation) {
+      navigate();
+    }
+  }
+  function destroy() {
+    removeAttribute(list, ALL_ATTRIBUTES);
+    events.forEach((event) => {
+      event.destroy();
+    });
+    empty(events);
+  }
+  function remount() {
+    destroy();
+    mount();
+  }
+  function sync(splide) {
+    [Splide2, splide].forEach((instance) => {
+      const event = EventInterface(instance);
+      const target = instance === Splide2 ? splide : Splide2;
+      event.on(EVENT_MOVE, (index, prev, dest) => {
+        target.go(target.is(LOOP) ? dest : index);
+      });
+      events.push(event);
+    });
+  }
+  function navigate() {
+    const event = EventInterface(Splide2);
+    const { on } = event;
+    on(EVENT_CLICK, onClick);
+    on(EVENT_SLIDE_KEYDOWN, onKeydown);
+    on([EVENT_MOUNTED, EVENT_UPDATED], update);
+    setAttribute(list, ROLE, "menu");
+    events.push(event);
+    event.emit(EVENT_NAVIGATION_MOUNTED, Splide2.splides);
+  }
+  function update() {
+    setAttribute(list, ARIA_ORIENTATION, options.direction !== TTB ? "horizontal" : null);
+  }
+  function onClick(Slide) {
+    Splide2.go(Slide.index);
+  }
+  function onKeydown(Slide, e) {
+    if (includes(TRIGGER_KEYS, e.key)) {
+      onClick(Slide);
+      prevent(e);
+    }
+  }
+  return {
+    mount,
+    destroy,
+    remount
+  };
+}
+
+function Wheel(Splide2, Components2, options) {
+  const { bind } = EventInterface(Splide2);
+  function mount() {
+    if (options.wheel) {
+      bind(Components2.Elements.track, "wheel", onWheel, SCROLL_LISTENER_OPTIONS);
+    }
+  }
+  function onWheel(e) {
+    if (e.cancelable) {
+      const { deltaY } = e;
+      if (deltaY) {
+        const backwards = deltaY < 0;
+        Splide2.go(backwards ? "<" : ">");
+        shouldPrevent(backwards) && prevent(e);
+      }
+    }
+  }
+  function shouldPrevent(backwards) {
+    return !options.releaseWheel || Splide2.state.is(MOVING) || Components2.Controller.getAdjacent(backwards) !== -1;
+  }
+  return {
+    mount
+  };
+}
+
+var ComponentConstructors = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  Options: Options,
+  Direction: Direction,
+  Elements: Elements,
+  Slides: Slides,
+  Layout: Layout,
+  Clones: Clones,
+  Move: Move,
+  Controller: Controller,
+  Arrows: Arrows,
+  Autoplay: Autoplay,
+  Cover: Cover,
+  Scroll: Scroll,
+  Drag: Drag,
+  Keyboard: Keyboard,
+  LazyLoad: LazyLoad,
+  Pagination: Pagination,
+  Sync: Sync,
+  Wheel: Wheel
+});
+
+const I18N = {
+  prev: "Previous slide",
+  next: "Next slide",
+  first: "Go to first slide",
+  last: "Go to last slide",
+  slideX: "Go to slide %s",
+  pageX: "Go to page %s",
+  play: "Start autoplay",
+  pause: "Pause autoplay"
+};
+
+const DEFAULTS = {
+  type: "slide",
+  speed: 400,
+  waitForTransition: true,
+  perPage: 1,
+  cloneStatus: true,
+  arrows: true,
+  pagination: true,
+  interval: 5e3,
+  pauseOnHover: true,
+  pauseOnFocus: true,
+  resetProgress: true,
+  keyboard: true,
+  easing: "cubic-bezier(0.25, 1, 0.5, 1)",
+  drag: true,
+  direction: "ltr",
+  slideFocus: true,
+  trimSpace: true,
+  focusableNodes: "a, button, textarea, input, select, iframe",
+  classes: CLASSES,
+  i18n: I18N
+};
+
+function Fade(Splide2, Components2, options) {
+  const { on } = EventInterface(Splide2);
+  function mount() {
+    on([EVENT_MOUNTED, EVENT_REFRESH], () => {
+      nextTick(() => {
+        Components2.Slides.style("transition", `opacity ${options.speed}ms ${options.easing}`);
+      });
+    });
+  }
+  function start(index, done) {
+    const { track } = Components2.Elements;
+    style(track, "height", unit(rect(track).height));
+    nextTick(() => {
+      done();
+      style(track, "height", "");
+    });
+  }
+  return {
+    mount,
+    start,
+    cancel: noop
+  };
+}
+
+function Slide(Splide2, Components2, options) {
+  const { bind } = EventInterface(Splide2);
+  const { Move, Controller } = Components2;
+  const { list } = Components2.Elements;
+  let endCallback;
+  function mount() {
+    bind(list, "transitionend", (e) => {
+      if (e.target === list && endCallback) {
+        cancel();
+        endCallback();
+      }
+    });
+  }
+  function start(index, done) {
+    const destination = Move.toPosition(index, true);
+    const position = Move.getPosition();
+    const speed = getSpeed(index);
+    if (abs(destination - position) >= 1 && speed >= 1) {
+      apply(`transform ${speed}ms ${options.easing}`);
+      Move.translate(destination, true);
+      endCallback = done;
+    } else {
+      Move.jump(index);
+      done();
+    }
+  }
+  function cancel() {
+    apply("");
+  }
+  function getSpeed(index) {
+    const { rewindSpeed } = options;
+    if (Splide2.is(SLIDE) && rewindSpeed) {
+      const prev = Controller.getIndex(true);
+      const end = Controller.getEnd();
+      if (prev === 0 && index >= end || prev >= end && index === 0) {
+        return rewindSpeed;
+      }
+    }
+    return options.speed;
+  }
+  function apply(transition) {
+    style(list, "transition", transition);
+  }
+  return {
+    mount,
+    start,
+    cancel
+  };
+}
+
+const _Splide = class {
+  constructor(target, options) {
+    this.event = EventBus();
+    this.Components = {};
+    this.state = State(CREATED);
+    this.splides = [];
+    this._options = {};
+    this._Extensions = {};
+    const root = isString(target) ? query(document, target) : target;
+    assert(root, `${root} is invalid.`);
+    this.root = root;
+    merge(DEFAULTS, _Splide.defaults);
+    merge(merge(this._options, DEFAULTS), options || {});
+  }
+  mount(Extensions, Transition) {
+    const { state, Components: Components2 } = this;
+    assert(state.is([CREATED, DESTROYED]), "Already mounted!");
+    state.set(CREATED);
+    this._Components = Components2;
+    this._Transition = Transition || this._Transition || (this.is(FADE) ? Fade : Slide);
+    this._Extensions = Extensions || this._Extensions;
+    const Constructors = assign({}, ComponentConstructors, this._Extensions, { Transition: this._Transition });
+    forOwn(Constructors, (Component, key) => {
+      const component = Component(this, Components2, this._options);
+      Components2[key] = component;
+      component.setup && component.setup();
+    });
+    forOwn(Components2, (component) => {
+      component.mount && component.mount();
+    });
+    this.emit(EVENT_MOUNTED);
+    addClass(this.root, CLASS_INITIALIZED);
+    state.set(IDLE);
+    this.emit(EVENT_READY);
+    return this;
+  }
+  sync(splide) {
+    this.splides.push({ splide });
+    splide.splides.push({ splide: this, isParent: true });
+    if (this.state.is(IDLE)) {
+      this._Components.Sync.remount();
+      splide.Components.Sync.remount();
+    }
+    return this;
+  }
+  go(control) {
+    this._Components.Controller.go(control);
+    return this;
+  }
+  on(events, callback) {
+    this.event.on(events, callback, null, DEFAULT_USER_EVENT_PRIORITY);
+    return this;
+  }
+  off(events) {
+    this.event.off(events);
+    return this;
+  }
+  emit(event) {
+    this.event.emit(event, ...slice(arguments, 1));
+    return this;
+  }
+  add(slides, index) {
+    this._Components.Slides.add(slides, index);
+    return this;
+  }
+  remove(matcher) {
+    this._Components.Slides.remove(matcher);
+    return this;
+  }
+  is(type) {
+    return this._options.type === type;
+  }
+  refresh() {
+    this.emit(EVENT_REFRESH);
+    return this;
+  }
+  destroy(completely = true) {
+    const { event, state } = this;
+    if (state.is(CREATED)) {
+      event.on(EVENT_READY, this.destroy.bind(this, completely), this);
+    } else {
+      forOwn(this._Components, (component) => {
+        component.destroy && component.destroy(completely);
+      }, true);
+      event.emit(EVENT_DESTROY);
+      event.destroy();
+      completely && empty(this.splides);
+      state.set(DESTROYED);
+    }
+    return this;
+  }
+  get options() {
+    return this._options;
+  }
+  set options(options) {
+    const { _options } = this;
+    merge(_options, options);
+    if (!this.state.is(CREATED)) {
+      this.emit(EVENT_UPDATED, _options);
+    }
+  }
+  get length() {
+    return this._Components.Slides.getLength(true);
+  }
+  get index() {
+    return this._Components.Controller.getIndex();
+  }
+};
+let Splide = _Splide;
+Splide.defaults = {};
+Splide.STATES = STATES;
+
+const CLASS_RENDERED = "is-rendered";
+
+const RENDERER_DEFAULT_CONFIG = {
+  listTag: "ul",
+  slideTag: "li"
+};
+
+class Style {
+  constructor(id, options) {
+    this.styles = {};
+    this.id = id;
+    this.options = options;
+  }
+  rule(selector, prop, value, breakpoint) {
+    breakpoint = breakpoint || "default";
+    const selectors = this.styles[breakpoint] = this.styles[breakpoint] || {};
+    const styles = selectors[selector] = selectors[selector] || {};
+    styles[prop] = value;
+  }
+  build() {
+    let css = "";
+    if (this.styles.default) {
+      css += this.buildSelectors(this.styles.default);
+    }
+    Object.keys(this.styles).sort((n, m) => this.options.mediaQuery === "min" ? +n - +m : +m - +n).forEach((breakpoint) => {
+      if (breakpoint !== "default") {
+        css += `@media screen and (max-width: ${breakpoint}px) {`;
+        css += this.buildSelectors(this.styles[breakpoint]);
+        css += `}`;
+      }
+    });
+    return css;
+  }
+  buildSelectors(selectors) {
+    let css = "";
+    forOwn(selectors, (styles, selector) => {
+      selector = `#${this.id} ${selector}`.trim();
+      css += `${selector} {`;
+      forOwn(styles, (value, prop) => {
+        if (value || value === 0) {
+          css += `${prop}: ${value};`;
+        }
+      });
+      css += "}";
+    });
+    return css;
+  }
+}
+
+class SplideRenderer {
+  constructor(contents, options, config, defaults) {
+    this.slides = [];
+    this.options = {};
+    this.breakpoints = [];
+    merge(DEFAULTS, defaults || {});
+    merge(merge(this.options, DEFAULTS), options || {});
+    this.contents = contents;
+    this.config = assign({}, RENDERER_DEFAULT_CONFIG, config || {});
+    this.id = this.config.id || uniqueId("splide");
+    this.Style = new Style(this.id, this.options);
+    this.Direction = Direction(null, null, this.options);
+    assert(this.contents.length, "Provide at least 1 content.");
+    this.init();
+  }
+  static clean(splide) {
+    const { on } = EventInterface(splide);
+    const { root } = splide;
+    const clones = queryAll(root, `.${CLASS_CLONE}`);
+    on(EVENT_MOUNTED, () => {
+      remove(child(root, "style"));
+    });
+    remove(clones);
+  }
+  init() {
+    this.parseBreakpoints();
+    this.initSlides();
+    this.registerRootStyles();
+    this.registerTrackStyles();
+    this.registerSlideStyles();
+    this.registerListStyles();
+  }
+  initSlides() {
+    push(this.slides, this.contents.map((content, index) => {
+      content = isString(content) ? { html: content } : content;
+      content.styles = content.styles || {};
+      content.attrs = content.attrs || {};
+      this.cover(content);
+      const classes = `${this.options.classes.slide} ${index === 0 ? CLASS_ACTIVE : ""}`;
+      assign(content.attrs, {
+        class: `${classes} ${content.attrs.class || ""}`.trim(),
+        style: this.buildStyles(content.styles)
+      });
+      return content;
+    }));
+    if (this.isLoop()) {
+      this.generateClones(this.slides);
+    }
+  }
+  registerRootStyles() {
+    this.breakpoints.forEach(([width, options]) => {
+      this.Style.rule(" ", "max-width", unit(options.width), width);
+    });
+  }
+  registerTrackStyles() {
+    const { Style: Style2 } = this;
+    const selector = `.${CLASS_TRACK}`;
+    this.breakpoints.forEach(([width, options]) => {
+      Style2.rule(selector, this.resolve("paddingLeft"), this.cssPadding(options, false), width);
+      Style2.rule(selector, this.resolve("paddingRight"), this.cssPadding(options, true), width);
+      Style2.rule(selector, "height", this.cssTrackHeight(options), width);
+    });
+  }
+  registerListStyles() {
+    const { Style: Style2 } = this;
+    const selector = `.${CLASS_LIST}`;
+    this.breakpoints.forEach(([width, options]) => {
+      Style2.rule(selector, "transform", this.buildTranslate(options), width);
+      if (!this.cssSlideHeight(options)) {
+        Style2.rule(selector, "aspect-ratio", this.cssAspectRatio(options), width);
+      }
+    });
+  }
+  registerSlideStyles() {
+    const { Style: Style2 } = this;
+    const selector = `.${CLASS_SLIDE}`;
+    this.breakpoints.forEach(([width, options]) => {
+      Style2.rule(selector, "width", this.cssSlideWidth(options), width);
+      Style2.rule(selector, "height", this.cssSlideHeight(options) || "100%", width);
+      Style2.rule(selector, this.resolve("marginRight"), unit(options.gap) || "0px", width);
+      Style2.rule(`${selector} > img`, "display", options.cover ? "none" : "inline", width);
+    });
+  }
+  buildTranslate(options) {
+    const { resolve, orient } = this.Direction;
+    const values = [];
+    values.push(this.cssOffsetClones(options));
+    values.push(this.cssOffsetGaps(options));
+    if (this.isCenter(options)) {
+      values.push(this.buildCssValue(orient(-50), "%"));
+      values.push(...this.cssOffsetCenter(options));
+    }
+    return values.filter(Boolean).map((value) => `translate${resolve("X")}(${value})`).join(" ");
+  }
+  cssOffsetClones(options) {
+    const { resolve, orient } = this.Direction;
+    const cloneCount = this.getCloneCount();
+    if (this.isFixedWidth(options)) {
+      const { value, unit: unit2 } = this.parseCssValue(options[resolve("fixedWidth")]);
+      return this.buildCssValue(orient(value) * cloneCount, unit2);
+    }
+    const percent = 100 * cloneCount / options.perPage;
+    return `${orient(percent)}%`;
+  }
+  cssOffsetCenter(options) {
+    const { resolve, orient } = this.Direction;
+    if (this.isFixedWidth(options)) {
+      const { value, unit: unit2 } = this.parseCssValue(options[resolve("fixedWidth")]);
+      return [this.buildCssValue(orient(value / 2), unit2)];
+    }
+    const values = [];
+    const { perPage, gap } = options;
+    values.push(`${orient(50 / perPage)}%`);
+    if (gap) {
+      const { value, unit: unit2 } = this.parseCssValue(gap);
+      const gapOffset = (value / perPage - value) / 2;
+      values.push(this.buildCssValue(orient(gapOffset), unit2));
+    }
+    return values;
+  }
+  cssOffsetGaps(options) {
+    const cloneCount = this.getCloneCount();
+    if (cloneCount && options.gap) {
+      const { orient } = this.Direction;
+      const { value, unit: unit2 } = this.parseCssValue(options.gap);
+      if (this.isFixedWidth(options)) {
+        return this.buildCssValue(orient(value * cloneCount), unit2);
+      }
+      const { perPage } = options;
+      const gaps = cloneCount / perPage;
+      return this.buildCssValue(orient(gaps * value), unit2);
+    }
+    return "";
+  }
+  resolve(prop) {
+    return camelToKebab(this.Direction.resolve(prop));
+  }
+  cssPadding(options, right) {
+    const { padding } = options;
+    const prop = this.Direction.resolve(right ? "right" : "left", true);
+    return padding && unit(padding[prop] || (isObject(padding) ? 0 : padding)) || "0px";
+  }
+  cssTrackHeight(options) {
+    let height = "";
+    if (this.isVertical()) {
+      height = this.cssHeight(options);
+      assert(height, '"height" is missing.');
+      height = `calc(${height} - ${this.cssPadding(options, false)} - ${this.cssPadding(options, true)})`;
+    }
+    return height;
+  }
+  cssHeight(options) {
+    return unit(options.height);
+  }
+  cssSlideWidth(options) {
+    return options.autoWidth ? "" : unit(options.fixedWidth) || (this.isVertical() ? "" : this.cssSlideSize(options));
+  }
+  cssSlideHeight(options) {
+    return unit(options.fixedHeight) || (this.isVertical() ? options.autoHeight ? "" : this.cssSlideSize(options) : this.cssHeight(options));
+  }
+  cssSlideSize(options) {
+    const gap = unit(options.gap);
+    return `calc((100%${gap && ` + ${gap}`})/${options.perPage || 1}${gap && ` - ${gap}`})`;
+  }
+  cssAspectRatio(options) {
+    const { heightRatio } = options;
+    return heightRatio ? `${1 / heightRatio}` : "";
+  }
+  buildCssValue(value, unit2) {
+    return `${value}${unit2}`;
+  }
+  parseCssValue(value) {
+    if (isString(value)) {
+      const number = parseFloat(value) || 0;
+      const unit2 = value.replace(/\d*(\.\d*)?/, "") || "px";
+      return { value: number, unit: unit2 };
+    }
+    return { value, unit: "px" };
+  }
+  parseBreakpoints() {
+    const { breakpoints } = this.options;
+    this.breakpoints.push(["default", this.options]);
+    if (breakpoints) {
+      forOwn(breakpoints, (options, width) => {
+        this.breakpoints.push([width, merge(merge({}, this.options), options)]);
+      });
+    }
+  }
+  isFixedWidth(options) {
+    return !!options[this.Direction.resolve("fixedWidth")];
+  }
+  isLoop() {
+    return this.options.type === LOOP;
+  }
+  isCenter(options) {
+    if (options.focus === "center") {
+      if (this.isLoop()) {
+        return true;
+      }
+      if (this.options.type === SLIDE) {
+        return !this.options.trimSpace;
+      }
+    }
+    return false;
+  }
+  isVertical() {
+    return this.options.direction === TTB;
+  }
+  buildClasses() {
+    const { options } = this;
+    return [
+      CLASS_ROOT,
+      `${CLASS_ROOT}--${options.type}`,
+      `${CLASS_ROOT}--${options.direction}`,
+      options.drag && `${CLASS_ROOT}--draggable`,
+      options.isNavigation && `${CLASS_ROOT}--nav`,
+      CLASS_ACTIVE,
+      !this.config.hidden && CLASS_RENDERED
+    ].filter(Boolean).join(" ");
+  }
+  buildAttrs(attrs) {
+    let attr = "";
+    forOwn(attrs, (value, key) => {
+      attr += value ? ` ${camelToKebab(key)}="${value}"` : "";
+    });
+    return attr.trim();
+  }
+  buildStyles(styles) {
+    let style = "";
+    forOwn(styles, (value, key) => {
+      style += ` ${camelToKebab(key)}:${value};`;
+    });
+    return style.trim();
+  }
+  renderSlides() {
+    const { slideTag: tag } = this.config;
+    return this.slides.map((content) => {
+      return `<${tag} ${this.buildAttrs(content.attrs)}>${content.html || ""}</${tag}>`;
+    }).join("");
+  }
+  cover(content) {
+    const { styles, html = "" } = content;
+    if (this.options.cover && !this.options.lazyLoad) {
+      const src = html.match(/<img.*?src\s*=\s*(['"])(.+?)\1.*?>/);
+      if (src && src[2]) {
+        styles.background = `center/cover no-repeat url('${src[2]}')`;
+      }
+    }
+  }
+  generateClones(contents) {
+    const { classes } = this.options;
+    const count = this.getCloneCount();
+    const slides = contents.slice();
+    while (slides.length < count) {
+      push(slides, slides);
+    }
+    push(slides.slice(-count).reverse(), slides.slice(0, count)).forEach((content, index) => {
+      const attrs = assign({}, content.attrs, { class: `${content.attrs.class} ${classes.clone}` });
+      const clone = assign({}, content, { attrs });
+      index < count ? contents.unshift(clone) : contents.push(clone);
+    });
+  }
+  getCloneCount() {
+    if (this.isLoop()) {
+      const { options } = this;
+      if (options.clones) {
+        return options.clones;
+      }
+      const perPage = max(...this.breakpoints.map(([, options2]) => options2.perPage));
+      return perPage * ((options.flickMaxPages || 1) + 1);
+    }
+    return 0;
+  }
+  renderArrows() {
+    let html = "";
+    html += `<div class="${this.options.classes.arrows}">`;
+    html += this.renderArrow(true);
+    html += this.renderArrow(false);
+    html += `</div>`;
+    return html;
+  }
+  renderArrow(prev) {
+    const { classes, i18n } = this.options;
+    const attrs = {
+      class: `${classes.arrow} ${prev ? classes.prev : classes.next}`,
+      type: "button",
+      ariaLabel: prev ? i18n.prev : i18n.next
+    };
+    return `<button ${this.buildAttrs(attrs)}><svg xmlns="${XML_NAME_SPACE}" viewBox="0 0 ${SIZE} ${SIZE}" width="${SIZE}" height="${SIZE}"><path d="${this.options.arrowPath || PATH}" /></svg></button>`;
+  }
+  html() {
+    const { rootClass, listTag, arrows, beforeTrack, afterTrack, slider, beforeSlider, afterSlider } = this.config;
+    let html = "";
+    html += `<div id="${this.id}" class="${this.buildClasses()} ${rootClass || ""}">`;
+    html += `<style>${this.Style.build()}</style>`;
+    if (slider) {
+      html += beforeSlider || "";
+      html += `<div class="splide__slider">`;
+    }
+    html += beforeTrack || "";
+    if (arrows) {
+      html += this.renderArrows();
+    }
+    html += `<div class="splide__track">`;
+    html += `<${listTag} class="splide__list">`;
+    html += this.renderSlides();
+    html += `</${listTag}>`;
+    html += `</div>`;
+    html += afterTrack || "";
+    if (slider) {
+      html += `</div>`;
+      html += afterSlider || "";
+    }
+    html += `</div>`;
+    return html;
+  }
+}
 
 
-/***/ }),
 
-/***/ "./resources/css/tailwind.css":
-/*!************************************!*\
-  !*** ./resources/css/tailwind.css ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -114,29 +2925,179 @@
 /*!******************************!*\
   !*** ./resources/js/site.js ***!
   \******************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);
-// Alpine.js handles the show/hide of the mobile nav
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
 
+new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide('.splide').mount();
 
 /***/ }),
 
-/***/ 0:
-/*!*****************************************************************!*\
-  !*** multi ./resources/js/site.js ./resources/css/tailwind.css ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/css/tailwind.css":
+/*!************************************!*\
+  !*** ./resources/css/tailwind.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__(/*! D:\projects\lynnx\resources\js\site.js */"./resources/js/site.js");
-module.exports = __webpack_require__(/*! D:\projects\lynnx\resources\css\tailwind.css */"./resources/css/tailwind.css");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
 
 
 /***/ })
 
-/******/ });
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/site": 0,
+/******/ 			"css/tailwind": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/tailwind"], () => (__webpack_require__("./resources/js/site.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/tailwind"], () => (__webpack_require__("./resources/css/tailwind.css")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
