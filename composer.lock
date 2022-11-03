@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "616ac3671ec5d6a22e762831a79b699f",
+    "content-hash": "6263b6a0da97b212cabf2e382db8a059",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4938,16 +4938,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.50",
+            "version": "v3.3.51",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "dcf00549e0a2d418b605431c6816dbfb99e31548"
+                "reference": "c32c512563c2ee3aa9e6f1845832fd0deedc54a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/dcf00549e0a2d418b605431c6816dbfb99e31548",
-                "reference": "dcf00549e0a2d418b605431c6816dbfb99e31548",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/c32c512563c2ee3aa9e6f1845832fd0deedc54a3",
+                "reference": "c32c512563c2ee3aa9e6f1845832fd0deedc54a3",
                 "shasum": ""
             },
             "require": {
@@ -5026,7 +5026,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.50"
+                "source": "https://github.com/statamic/cms/tree/v3.3.51"
             },
             "funding": [
                 {
@@ -5034,7 +5034,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-11-01T15:54:31+00:00"
+            "time": "2022-11-02T19:25:55+00:00"
         },
         {
             "name": "statamic/ssg",
@@ -8634,16 +8634,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.14.5",
+            "version": "2.14.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "a63e5e8f26ebbebf8ed3c5c691637325512eb0dc"
+                "reference": "f7948baaa0330277c729714910336383286305da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/a63e5e8f26ebbebf8ed3c5c691637325512eb0dc",
-                "reference": "a63e5e8f26ebbebf8ed3c5c691637325512eb0dc",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/f7948baaa0330277c729714910336383286305da",
+                "reference": "f7948baaa0330277c729714910336383286305da",
                 "shasum": ""
             },
             "require": {
@@ -8693,7 +8693,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.14.5"
+                "source": "https://github.com/filp/whoops/tree/2.14.6"
             },
             "funding": [
                 {
@@ -8701,7 +8701,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-07T12:00:00+00:00"
+            "time": "2022-11-02T16:23:29+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -10887,7 +10887,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3 || ^8.0"
+        "php": "^8.1"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
