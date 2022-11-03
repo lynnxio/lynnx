@@ -32,7 +32,7 @@ if (mix.inProduction()) {
 }
 
 mix.browserSync({
-    host: '192.68.56.10',
+    host: '192.168.56.56',
     proxy: 'lynnx.test',
     open: false,
     files: [
